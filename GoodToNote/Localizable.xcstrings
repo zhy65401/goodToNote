@@ -1,0 +1,6261 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "%@ · 汇率待补": {
+      "comment": "Foreign-amount row in Ledger and Pending Inbox (Decimal-currency formatted amount + rate-pending suffix)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · rate pending"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · 汇率待补"
+          }
+        }
+      }
+    },
+    "%lld 笔待确认": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pending"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 笔待确认"
+          }
+        }
+      }
+    },
+    "(可选)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(optional)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(可选)"
+          }
+        }
+      }
+    },
+    "(可选)若你的卡是外币,可在「币种」填 3 位币码;留空则按本位币处理。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Optional) If your card is in a foreign currency, enter a 3-letter code in Currency; leave it blank to use your base currency."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(可选)若你的卡是外币,可在「币种」填 3 位币码;留空则按本位币处理。"
+          }
+        }
+      }
+    },
+    "(若出现)选「创建个人自动化 / Create Personal Automation」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(If shown) choose “Create Personal Automation”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(若出现)选「创建个人自动化 / Create Personal Automation」。"
+          }
+        }
+      }
+    },
+    "0.00": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.00"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.00"
+          }
+        }
+      }
+    },
+    "30/05/26": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30/05/26"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30/05/26"
+          }
+        }
+      }
+    },
+    "= %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "= %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "= %@"
+          }
+        }
+      }
+    },
+    "Add Transaction": {
+      "comment": "AddTransactionIntent.title (LocalizedStringResource)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Transaction"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记一笔交易"
+          }
+        }
+      }
+    },
+    "Add a transaction to %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a transaction to %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a transaction to %@"
+          }
+        }
+      }
+    },
+    "App": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        }
+      }
+    },
+    "Apple Pay 自动记账": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay auto-tracking"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay 自动记账"
+          }
+        }
+      }
+    },
+    "Apple Pay 自动记账已就绪。下次线下刷卡即自动入账,无需任何操作。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay auto-tracking is ready. Your next in-person payment is recorded automatically — nothing to do."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay 自动记账已就绪。下次线下刷卡即自动入账,无需任何操作。"
+          }
+        }
+      }
+    },
+    "English": {
+      "comment": "Language option (endonym shown to the user)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        }
+      }
+    },
+    "Good to note 的「处理银行短信」动作装好 app 就已经在「快捷指令」里了,不用导入任何东西。跟着下面做一个快捷指令:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good to note's \"Ingest bank SMS\" action is already in the Shortcuts app once the app is installed — nothing to import. Follow these steps to build a shortcut:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good to note 的「处理银行短信」动作装好 app 就已经在「快捷指令」里了,不用导入任何东西。跟着下面做一个快捷指令:"
+          }
+        }
+      }
+    },
+    "Record Apple Pay transaction": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction"
+          }
+        }
+      }
+    },
+    "Record Apple Pay transaction in \\(applicationName)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction in \\(applicationName)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction in \\(applicationName)"
+          }
+        }
+      }
+    },
+    "app订阅": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subscriptions"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "app订阅"
+          }
+        }
+      }
+    },
+    "≈ %@": {
+      "comment": "TransactionEditView live SGD preview",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@"
+          }
+        }
+      }
+    },
+    "① 在 app 内测试解析+落盘": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1) Test parsing + saving in-app"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "① 在 app 内测试解析+落盘"
+          }
+        }
+      }
+    },
+    "② 端到端测试:给自己发一条含关键词的短信(或等下一条真实银行短信),约 1 分钟后回到 app 流水页,应该能看到一笔新的待确认草稿。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2) End-to-end test: text yourself a message containing the keyword (or wait for your next real bank SMS). Come back to the app's ledger page in about a minute and you should see a new pending draft."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "② 端到端测试:给自己发一条含关键词的短信(或等下一条真实银行短信),约 1 分钟后回到 app 流水页,应该能看到一笔新的待确认草稿。"
+          }
+        }
+      }
+    },
+    "✓ 已生成 %lld 笔待确认(到流水页确认),app 侧 OK。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ Created %lld pending transaction(s) (confirm them on the ledger page). The app side is OK."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ 已生成 %lld 笔待确认(到流水页确认),app 侧 OK。"
+          }
+        }
+      }
+    },
+    "✓ 测试短信已收到并落盘(到流水页查看)。建好你自己的短信模版后,真实账单短信会自动识别金额、商户。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ Test SMS received and saved (see the transactions list). Once you build your own SMS template, real bill SMS will auto-detect the amount and merchant."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ 测试短信已收到并落盘(到流水页查看)。建好你自己的短信模版后,真实账单短信会自动识别金额、商户。"
+          }
+        }
+      }
+    },
+    "✓ 这条模版能认出示例：金额 %@／币种 %@／商户 %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ This template recognizes the sample: amount %@ / currency %@ / merchant %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ 这条模版能认出示例：金额 %@／币种 %@／商户 %@"
+          }
+        }
+      }
+    },
+    "✓ 这条模版能认出示例：金额 %@／币种 %@／商户 %@／日期 %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ This template recognizes the sample: amount %@ / currency %@ / merchant %@ / date %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✓ 这条模版能认出示例：金额 %@／币种 %@／商户 %@／日期 %@"
+          }
+        }
+      }
+    },
+    "一切就绪": {
+      "comment": "Onboarding done step title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All set"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一切就绪"
+          }
+        }
+      }
+    },
+    "上一步": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上一步"
+          }
+        }
+      }
+    },
+    "上月": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last Month"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上月"
+          }
+        }
+      }
+    },
+    "下一步": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一步"
+          }
+        }
+      }
+    },
+    "下次日期": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next Date"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下次日期"
+          }
+        }
+      }
+    },
+    "下次：%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下次：%@"
+          }
+        }
+      }
+    },
+    "不选": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不选"
+          }
+        }
+      }
+    },
+    "为什么不能替你建:『信息』自动化能在锁屏、你不在场时读到整条短信,iOS 出于隐私保护,规定这一步只能你亲手在「快捷指令」app 里建。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Why we can't create it for you: a Messages automation can read your full message even on the lock screen while you're away. For privacy, iOS requires that you create this step yourself in the Shortcuts app."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为什么不能替你建:『信息』自动化能在锁屏、你不在场时读到整条短信,iOS 出于隐私保护,规定这一步只能你亲手在「快捷指令」app 里建。"
+          }
+        }
+      }
+    },
+    "为什么要你亲手建:iOS 出于隐私,自动化只能你自己在「快捷指令」app 里建,任何 app 都无法替你创建。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Why you build it yourself: for privacy, iOS only lets you create automations yourself in the Shortcuts app — no app can create one for you."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为什么要你亲手建:iOS 出于隐私,自动化只能你自己在「快捷指令」app 里建,任何 app 都无法替你创建。"
+          }
+        }
+      }
+    },
+    "交通": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transport"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "交通"
+          }
+        }
+      }
+    },
+    "今年": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Year"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今年"
+          }
+        }
+      }
+    },
+    "从剪贴板粘贴": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste from Clipboard"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从剪贴板粘贴"
+          }
+        }
+      }
+    },
+    "从文件还原…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore from File…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从文件还原…"
+          }
+        }
+      }
+    },
+    "住房": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Housing"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "住房"
+          }
+        }
+      }
+    },
+    "保存": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "保存模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存模版"
+          }
+        }
+      }
+    },
+    "做好后,你的「我的快捷指令」里会有一个名叫「记账短信」、已接好「短信全文 ← 快捷指令输入」的指令。下一步把它挂到收到短信时自动跑。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When done, \"My Shortcuts\" will have one named \"SMS Logging\" with \"message ← Shortcut Input\" wired up. Next, hook it up to run automatically when a message arrives."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "做好后,你的「我的快捷指令」里会有一个名叫「记账短信」、已接好「短信全文 ← 快捷指令输入」的指令。下一步把它挂到收到短信时自动跑。"
+          }
+        }
+      }
+    },
+    "先在 app 内跑一遍,确认 app 这边能正常解析、落盘;再给自己发一条真实短信,验证自动化通不通。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "First run it in-app to confirm the app can parse and save correctly; then text yourself a real message to check the automation end-to-end."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先在 app 内跑一遍,确认 app 这边能正常解析、落盘;再给自己发一条真实短信,验证自动化通不通。"
+          }
+        }
+      }
+    },
+    "先选下面的类别，再点上面的词，词会高亮成该类别的颜色；连点相邻的词可连成一段。": {
+      "comment": "GN-029 instruction under the 点词标注 header.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick a category below, then tap the words above — each word highlights in that category's color; tap adjacent words to join them into one segment."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先选下面的类别，再点上面的词，词会高亮成该类别的颜色；连点相邻的词可连成一段。"
+          }
+        }
+      }
+    },
+    "全部": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部"
+          }
+        }
+      }
+    },
+    "关于": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于"
+          }
+        }
+      }
+    },
+    "关掉「运行时通知 / Notify When Run」,这样每笔自动记账不会打扰你。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn off Notify When Run so each auto-recorded transaction doesn't interrupt you."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关掉「运行时通知 / Notify When Run」,这样每笔自动记账不会打扰你。"
+          }
+        }
+      }
+    },
+    "关闭 App": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close App"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭 App"
+          }
+        }
+      }
+    },
+    "其他": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他"
+          }
+        }
+      }
+    },
+    "其他收入": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other Income"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他收入"
+          }
+        }
+      }
+    },
+    "再提醒一次:以后每来一条记账短信,会自动记一笔草稿 + 一条系统通知,到 app 流水页确认即可,属正常。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One more reminder: from now on, each transaction SMS auto-logs a draft plus a system notification. Just confirm it on the app's ledger page — that's normal."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再提醒一次:以后每来一条记账短信,会自动记一笔草稿 + 一条系统通知,到 app 流水页确认即可,属正常。"
+          }
+        }
+      }
+    },
+    "准备": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prepare"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "准备"
+          }
+        }
+      }
+    },
+    "分类": {
+      "comment": "Generic Category label; also CategoryEntity.typeDisplayRepresentation",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分类"
+          }
+        }
+      }
+    },
+    "分类占比": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分类占比"
+          }
+        }
+      }
+    },
+    "分类排行": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Category Ranking"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分类排行"
+          }
+        }
+      }
+    },
+    "分类管理": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manage Categories"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分类管理"
+          }
+        }
+      }
+    },
+    "分类（不选 = 未分类）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Category (none = Uncategorized)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分类（不选 = 未分类）"
+          }
+        }
+      }
+    },
+    "切换语言后需重启 App 才会生效。": {
+      "comment": "Footer under the language picker",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changing the language takes effect after you restart the app."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换语言后需重启 App 才会生效。"
+          }
+        }
+      }
+    },
+    "删除": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        }
+      }
+    },
+    "删除分类「%@」？该分类下暂无交易。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete category “%@”? It has no transactions."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除分类「%@」？该分类下暂无交易。"
+          }
+        }
+      }
+    },
+    "删除此周期规则不会删除已生成的交易。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deleting this recurring rule will not delete transactions already generated."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除此周期规则不会删除已生成的交易。"
+          }
+        }
+      }
+    },
+    "医疗": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medical"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "医疗"
+          }
+        }
+      }
+    },
+    "卡号": {
+      "comment": "GN-029 category label for the card-mask role (rarely shown in UI).",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card no."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卡号"
+          }
+        }
+      }
+    },
+    "卡尾号通配（多卡也能匹配）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wildcard card digits (match all cards)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卡尾号通配（多卡也能匹配）"
+          }
+        }
+      }
+    },
+    "原文": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original Text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原文"
+          }
+        }
+      }
+    },
+    "发送测试": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send Test"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送测试"
+          }
+        }
+      }
+    },
+    "取消": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "可以把银行消费短信自动记成一笔待确认账目。设置稍后再配置也可以。": {
+      "comment": "Onboarding SMS step description",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank transaction texts can be turned into pending entries automatically. You can set this up later."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以把银行消费短信自动记成一笔待确认账目。设置稍后再配置也可以。"
+          }
+        }
+      }
+    },
+    "可能与已记的 Apple Pay 交易重复(同金额、同币种、时间相近)。若确属同一笔请拒绝。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Possibly a duplicate of an Apple Pay transaction already recorded (same amount, currency, and a nearby time). If it's the same purchase, reject it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可能与已记的 Apple Pay 交易重复(同金额、同币种、时间相近)。若确属同一笔请拒绝。"
+          }
+        }
+      }
+    },
+    "名称": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称"
+          }
+        }
+      }
+    },
+    "启用": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enabled"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用"
+          }
+        }
+      }
+    },
+    "周期": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Period"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "周期"
+          }
+        }
+      }
+    },
+    "周期交易": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recurring"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "周期交易"
+          }
+        }
+      }
+    },
+    "咖啡": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coffee"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "咖啡"
+          }
+        }
+      }
+    },
+    "商户": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Merchant"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "商户"
+          }
+        }
+      }
+    },
+    "商户名": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Merchant"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "商户名"
+          }
+        }
+      }
+    },
+    "图标（单个 emoji）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Icon (single emoji)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图标（单个 emoji）"
+          }
+        }
+      }
+    },
+    "在「信息包含 / Message Contains」里点「选取 / Choose」,长按粘贴(关键词已复制好)。发件人 Sender 可留空。然后点「下一步 / Next」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Under \"Message Contains\", tap \"Choose\" and long-press to paste (the keyword is already copied). You can leave Sender empty. Then tap \"Next\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「信息包含 / Message Contains」里点「选取 / Choose」,长按粘贴(关键词已复制好)。发件人 Sender 可留空。然后点「下一步 / Next」。"
+          }
+        }
+      }
+    },
+    "在「快捷指令」底部找到并点「自动化 / Automation」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "At the bottom of Shortcuts, find and tap \"Automation\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「快捷指令」底部找到并点「自动化 / Automation」。"
+          }
+        }
+      }
+    },
+    "在列表里找到并点「交易 / Transaction」(iOS 26 上叫「钱包 / Wallet」)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Find and tap Transaction in the list (called Wallet on iOS 26)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在列表里找到并点「交易 / Transaction」(iOS 26 上叫「钱包 / Wallet」)。"
+          }
+        }
+      }
+    },
+    "在原文里找不到「%@」的写法，将改用下面的「币种回退」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't find “%@” in the text; the fallback currency below will be used."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在原文里找不到「%@」的写法，将改用下面的「币种回退」。"
+          }
+        }
+      }
+    },
+    "在原文里找不到「%@」，将不识别日期、改用短信到达时刻。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't find “%@” in the original text — the date won't be recognized; the time the SMS arrived will be used instead."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在原文里找不到「%@」，将不识别日期、改用短信到达时刻。"
+          }
+        }
+      }
+    },
+    "在原文里找不到「%@」，请用原文里的写法。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't find “%@” in the original text — please use the spelling exactly as it appears."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在原文里找不到「%@」，请用原文里的写法。"
+          }
+        }
+      }
+    },
+    "在底部点「快捷指令 / Shortcuts」,右上角点「+」新建一个。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap \"Shortcuts\" at the bottom, then tap \"+\" in the top right to create a new one."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在底部点「快捷指令 / Shortcuts」,右上角点「+」新建一个。"
+          }
+        }
+      }
+    },
+    "在底部点「自动化 / Automation」标签。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the Automation tab at the bottom."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在底部点「自动化 / Automation」标签。"
+          }
+        }
+      }
+    },
+    "在触发列表里找到并点「信息 / Message」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the trigger list, find and tap \"Message\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发列表里找到并点「信息 / Message」。"
+          }
+        }
+      }
+    },
+    "在触发类型列表里,选与 Apple Pay 交易相关的那一项。不同 iOS 版本名字略有差异。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the list of trigger types, choose the one for Apple Pay transactions. The name varies slightly by iOS version."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发类型列表里,选与 Apple Pay 交易相关的那一项。不同 iOS 版本名字略有差异。"
+          }
+        }
+      }
+    },
+    "处理银行短信": {
+      "comment": "IngestUOBMessageIntent shortTitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingest bank SMS"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "处理银行短信"
+          }
+        }
+      }
+    },
+    "备注": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "备注"
+          }
+        }
+      }
+    },
+    "好": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
+        }
+      }
+    },
+    "学习": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Education"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "学习"
+          }
+        }
+      }
+    },
+    "完成": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        }
+      }
+    },
+    "工资": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salary"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工资"
+          }
+        }
+      }
+    },
+    "已复制": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已复制"
+          }
+        }
+      }
+    },
+    "已收到待确认：%@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received (pending): %@ %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已收到待确认：%@ %@"
+          }
+        }
+      }
+    },
+    "已收到待确认：%@ %@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received (pending): %@ %@ %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已收到待确认：%@ %@ %@"
+          }
+        }
+      }
+    },
+    "已收到，待在 app 内识别。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received — will be recognized in the app."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已收到，待在 app 内识别。"
+          }
+        }
+      }
+    },
+    "已自动记录:\\(amtDisplay)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-recorded: \\(amtDisplay)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已自动记录:\\(amtDisplay)"
+          }
+        }
+      }
+    },
+    "已自动记录:\\(amtDisplay) \\(md)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-recorded: \\(amtDisplay) \\(md)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已自动记录:\\(amtDisplay) \\(md)"
+          }
+        }
+      }
+    },
+    "已记录：%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recorded: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已记录：%@"
+          }
+        }
+      }
+    },
+    "币种": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Currency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "币种"
+          }
+        }
+      }
+    },
+    "币种回退": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Currency Fallback"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "币种回退"
+          }
+        }
+      }
+    },
+    "常用": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Common"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常用"
+          }
+        }
+      }
+    },
+    "应用语言会自动跟随你的系统语言。": {
+      "comment": "Onboarding welcome step note",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app language follows your system language automatically."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用语言会自动跟随你的系统语言。"
+          }
+        }
+      }
+    },
+    "建好后,下次用选中的卡线下刷 Apple Pay,约几秒内 app 流水里就会自动出现这一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once set up, the next time you tap to pay in person with a selected card, the transaction appears in the app's ledger automatically within seconds."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建好后,下次用选中的卡线下刷 Apple Pay,约几秒内 app 流水里就会自动出现这一笔。"
+          }
+        }
+      }
+    },
+    "建自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建自动化"
+          }
+        }
+      }
+    },
+    "开始": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
+          }
+        }
+      }
+    },
+    "开始使用": {
+      "comment": "Onboarding final-step primary button (finish flow)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Started"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始使用"
+          }
+        }
+      }
+    },
+    "待确认收件箱": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pending Inbox"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待确认收件箱"
+          }
+        }
+      }
+    },
+    "快捷指令": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shortcut"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快捷指令"
+          }
+        }
+      }
+    },
+    "我们要在「快捷指令」app 里新建一个自动化。点下面的按钮打开它,然后到底部的「自动化」标签。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We'll create a new automation in the Shortcuts app. Tap the button below to open it, then go to the Automation tab at the bottom."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我们要在「快捷指令」app 里新建一个自动化。点下面的按钮打开它,然后到底部的「自动化」标签。"
+          }
+        }
+      }
+    },
+    "我的银行": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Bank"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我的银行"
+          }
+        }
+      }
+    },
+    "手动补一笔": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add manually"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动补一笔"
+          }
+        }
+      }
+    },
+    "打开「快捷指令」app": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the Shortcuts app"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开「快捷指令」app"
+          }
+        }
+      }
+    },
+    "打开「快捷指令」自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Shortcuts Automation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开「快捷指令」自动化"
+          }
+        }
+      }
+    },
+    "找不到?在该列表里下滑,它通常在靠后的位置;可用搜索框输入「交易 / Transaction / 钱包 / Wallet」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't find it? Scroll down — it's usually near the bottom; or search for Transaction / Wallet."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到?在该列表里下滑,它通常在靠后的位置;可用搜索框输入「交易 / Transaction / 钱包 / Wallet」。"
+          }
+        }
+      }
+    },
+    "把 Apple Pay 交易 \\(amount) \\(merchant) 记入流水": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction \\(amount) \\(merchant)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把 Apple Pay 交易 \\(amount) \\(merchant) 记入流水"
+          }
+        }
+      }
+    },
+    "把一条交易短信全文喂给 Good to note，静默按你的短信模版识别并落盘成一笔待确认草稿（无匹配模版则落原文待识别，绝不丢弃）。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feed one full transaction SMS to Good to note; it silently matches your SMS templates and saves a pending draft (if no template matches, the original text is saved for in-app recognition — nothing is ever dropped)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把一条交易短信全文喂给 Good to note，静默按你的短信模版识别并落盘成一笔待确认草稿（无匹配模版则落原文待识别，绝不丢弃）。"
+          }
+        }
+      }
+    },
+    "把一笔 Apple Pay /「钱包」交易(商户+金额)直接记入 Good to note 流水,全自动、无需确认。外币自动换算成本位币。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record an Apple Pay / Wallet transaction (merchant + amount) straight into Good to note — fully automatic, no confirmation. Foreign amounts are auto-converted to your base currency."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把一笔 Apple Pay /「钱包」交易(商户+金额)直接记入 Good to note 流水,全自动、无需确认。外币自动换算成本位币。"
+          }
+        }
+      }
+    },
+    "把你银行的一条交易短信粘贴进来，我们来认一认。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste one transaction SMS from your bank and we'll detect the fields."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把你银行的一条交易短信粘贴进来，我们来认一认。"
+          }
+        }
+      }
+    },
+    "把动作的「金额」参数设为触发提供的「金额 / Amount」,「商户」参数设为「商户 / Merchant」(点参数 → 从「快捷指令输入」里选对应变量)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the action's Amount parameter to the trigger's Amount, and its Merchant parameter to Merchant (tap the parameter → pick the matching variable from Shortcut Input)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把动作的「金额」参数设为触发提供的「金额 / Amount」,「商户」参数设为「商户 / Merchant」(点参数 → 从「快捷指令输入」里选对应变量)。"
+          }
+        }
+      }
+    },
+    "把短信 %@ 落盘成待确认草稿": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save message %@ as a pending draft"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把短信 %@ 落盘成待确认草稿"
+          }
+        }
+      }
+    },
+    "把运行方式设为「立即运行 / Run Immediately」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it to Run Immediately."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把运行方式设为「立即运行 / Run Immediately」。"
+          }
+        }
+      }
+    },
+    "把运行方式设成「立即运行 / Run Immediately」(若看到「运行前询问 / Ask Before Running」就关掉它),点「完成 / Done」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it to \"Run Immediately\" (if you see \"Ask Before Running\", turn it off), then tap \"Done\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把运行方式设成「立即运行 / Run Immediately」(若看到「运行前询问 / Ask Before Running」就关掉它),点「完成 / Done」。"
+          }
+        }
+      }
+    },
+    "把这个动作的输入设为「快捷指令输入 / Shortcut Input」(点动作里的「短信全文」参数 → 选「快捷指令输入」)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the action's input to \"Shortcut Input\" (tap the action's \"message\" parameter, then choose \"Shortcut Input\")."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把这个动作的输入设为「快捷指令输入 / Shortcut Input」(点动作里的「短信全文」参数 → 选「快捷指令输入」)。"
+          }
+        }
+      }
+    },
+    "拒绝": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reject"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拒绝"
+          }
+        }
+      }
+    },
+    "按分类筛选": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter by Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按分类筛选"
+          }
+        }
+      }
+    },
+    "换个时间范围或先记几笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick another range or add a few records first."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "换个时间范围或先记几笔。"
+          }
+        }
+      }
+    },
+    "接动作": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接动作"
+          }
+        }
+      }
+    },
+    "接受": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accept"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接受"
+          }
+        }
+      }
+    },
+    "接受这一笔": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accept This One"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接受这一笔"
+          }
+        }
+      }
+    },
+    "搜索币种": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search currency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索币种"
+          }
+        }
+      }
+    },
+    "支出": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expense"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支出"
+          }
+        }
+      }
+    },
+    "支出 %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expense %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支出 %@"
+          }
+        }
+      }
+    },
+    "支出趋势": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spending Trend"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支出趋势"
+          }
+        }
+      }
+    },
+    "收入": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Income"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收入"
+          }
+        }
+      }
+    },
+    "收入 %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Income %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收入 %@"
+          }
+        }
+      }
+    },
+    "收支类型": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收支类型"
+          }
+        }
+      }
+    },
+    "教学视频(即将上线)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutorial video (coming soon)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "教学视频(即将上线)"
+          }
+        }
+      }
+    },
+    "数据备份与还原": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data Backup & Restore"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据备份与还原"
+          }
+        }
+      }
+    },
+    "数据已就绪。App 即将关闭，请重新打开以完成还原。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data is ready. The app will now close — reopen it to finish restoring."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据已就绪。App 即将关闭，请重新打开以完成还原。"
+          }
+        }
+      }
+    },
+    "新增分类": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增分类"
+          }
+        }
+      }
+    },
+    "新增周期交易": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Recurring"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增周期交易"
+          }
+        }
+      }
+    },
+    "新建": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建"
+          }
+        }
+      }
+    },
+    "新建短信模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New SMS Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建短信模版"
+          }
+        }
+      }
+    },
+    "旅行": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "旅行"
+          }
+        }
+      }
+    },
+    "无法保存": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't Save"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存"
+          }
+        }
+      }
+    },
+    "无法解析金额": {
+      "comment": "GN-029 amount parse-preview when the tagged/edited amount text doesn't parse.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't parse amount"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法解析金额"
+          }
+        }
+      }
+    },
+    "无法解析，将用短信到达时刻": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't parse — will use the time the SMS arrived"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法解析，将用短信到达时刻"
+          }
+        }
+      }
+    },
+    "无法读取该备份文件（可能不是有效的 %@）：%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cannot read this backup file (it may not be a valid %@): %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取该备份文件（可能不是有效的 %@）：%@"
+          }
+        }
+      }
+    },
+    "日期": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日期"
+          }
+        }
+      }
+    },
+    "暂无分类": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No categories"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无分类"
+          }
+        }
+      }
+    },
+    "暂无周期交易。点右上角 + 新增。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No recurring transactions. Tap + at the top right to add one."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无周期交易。点右上角 + 新增。"
+          }
+        }
+      }
+    },
+    "更改失败": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change Failed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改失败"
+          }
+        }
+      }
+    },
+    "更改本位币会按当前汇率重算所有历史交易的本位金额，与当初记账汇率不同。已自动备份。继续？": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changing the base currency recomputes the base amount of every past transaction at the current exchange rate, which differs from the rate recorded at entry time. A backup has been made automatically. Continue?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改本位币会按当前汇率重算所有历史交易的本位金额，与当初记账汇率不同。已自动备份。继续？"
+          }
+        }
+      }
+    },
+    "最后一步:建一个自动短信触发": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last step: set up an automatic SMS trigger"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最后一步:建一个自动短信触发"
+          }
+        }
+      }
+    },
+    "最后一步要你手动建一个『信息』自动化(iOS 规定只能你亲手建),共约 6 小步,我一步步带你,关键词已帮你复制好。每次自动记账会有一条系统通知,属正常。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The last step asks you to manually create a Messages automation (iOS requires you to create it yourself). It's about 6 small steps — I'll walk you through each one, and the keyword is already copied for you. Each auto-logged transaction will show a system notification; that's normal."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最后一步要你手动建一个『信息』自动化(iOS 规定只能你亲手建),共约 6 小步,我一步步带你,关键词已帮你复制好。每次自动记账会有一条系统通知,属正常。"
+          }
+        }
+      }
+    },
+    "未分类": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uncategorized"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未分类"
+          }
+        }
+      }
+    },
+    "未知商户": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown merchant"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知商户"
+          }
+        }
+      }
+    },
+    "未能识别金额,这一笔未记录。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't read the amount — this transaction wasn't recorded."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未能识别金额,这一笔未记录。"
+          }
+        }
+      }
+    },
+    "未识别短信": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unrecognized SMS"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未识别短信"
+          }
+        }
+      }
+    },
+    "本位币": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base Currency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本位币"
+          }
+        }
+      }
+    },
+    "本位币是统计和汇总时使用的货币。记账时可以用任意货币，应用会按汇率折算到本位币。": {
+      "comment": "Onboarding base-currency step description",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your base currency is used for totals and statistics. You can record entries in any currency, and they will be converted to your base currency."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本位币是统计和汇总时使用的货币。记账时可以用任意货币，应用会按汇率折算到本位币。"
+          }
+        }
+      }
+    },
+    "本月": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Month"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本月"
+          }
+        }
+      }
+    },
+    "本月暂无记录": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No records this month"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本月暂无记录"
+          }
+        }
+      }
+    },
+    "模版名": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Template Name"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模版名"
+          }
+        }
+      }
+    },
+    "模版已保存": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Template Saved"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模版已保存"
+          }
+        }
+      }
+    },
+    "模版已保存，但用示例自检时未能重新识别。你可以稍后在模版列表里编辑。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Template saved, but it couldn't re-recognize the sample. You can edit it later in the template list."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模版已保存，但用示例自检时未能重新识别。你可以稍后在模版列表里编辑。"
+          }
+        }
+      }
+    },
+    "模版设置": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Template Settings"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模版设置"
+          }
+        }
+      }
+    },
+    "欢迎使用 Good to note": {
+      "comment": "Onboarding welcome step title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to Good to note"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "欢迎使用 Good to note"
+          }
+        }
+      }
+    },
+    "每周": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekly"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每周"
+          }
+        }
+      }
+    },
+    "每天": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每天"
+          }
+        }
+      }
+    },
+    "每年": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yearly"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每年"
+          }
+        }
+      }
+    },
+    "每月": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每月"
+          }
+        }
+      }
+    },
+    "每次启动会自动备份到「文件 → 我的 iPhone → GoodToNote → Backups」，为单个 %@ 文件，可拷到 iCloud Drive / 电脑存档。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On each launch a backup is saved to Files → On My iPhone → GoodToNote → Backups as a single %@ file, which you can copy to iCloud Drive or your computer."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每次启动会自动备份到「文件 → 我的 iPhone → GoodToNote → Backups」，为单个 %@ 文件，可拷到 iCloud Drive / 电脑存档。"
+          }
+        }
+      }
+    },
+    "水电气": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilities"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "水电气"
+          }
+        }
+      }
+    },
+    "汇率 1 %@ =": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rate 1 %@ ="
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "汇率 1 %@ ="
+          }
+        }
+      }
+    },
+    "没收到? 检查:自动化是否已开、关键词是否填对、运行方式是否选了「立即运行」。可随时回到「设置 ▸ 短信自动记账」重做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing showed up? Check: the automation is on, the keyword is correct, and \"Run Immediately\" is selected. You can redo this any time from Settings ▸ SMS Auto-Logging."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没收到? 检查:自动化是否已开、关键词是否填对、运行方式是否选了「立即运行」。可随时回到「设置 ▸ 短信自动记账」重做。"
+          }
+        }
+      }
+    },
+    "没有可用的短信模版,无法生成关键词。请先到「设置 ▸ 短信模版」添加一个模版。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No usable SMS template, so no keyword could be generated. Add a template first in Settings ▸ SMS Templates."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可用的短信模版,无法生成关键词。请先到「设置 ▸ 短信模版」添加一个模版。"
+          }
+        }
+      }
+    },
+    "没有待确认": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing pending"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有待确认"
+          }
+        }
+      }
+    },
+    "没自动记上?确认:自动化已开、选了「立即运行」、动作里金额/商户已正确映射。可随时回到「设置 ▸ 记账 ▸ Apple Pay 自动记账」重做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not recorded automatically? Check that the automation is on, set to Run Immediately, and that Amount/Merchant are mapped correctly in the action. You can redo this anytime from Settings ▸ Bookkeeping ▸ Apple Pay auto-tracking."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没自动记上?确认:自动化已开、选了「立即运行」、动作里金额/商户已正确映射。可随时回到「设置 ▸ 记账 ▸ Apple Pay 自动记账」重做。"
+          }
+        }
+      }
+    },
+    "流水": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transactions"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "流水"
+          }
+        }
+      }
+    },
+    "清除": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除"
+          }
+        }
+      }
+    },
+    "游戏": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Games"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游戏"
+          }
+        }
+      }
+    },
+    "点「完成 / Done」保存自动化。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap Done to save the automation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点「完成 / Done」保存自动化。"
+          }
+        }
+      }
+    },
+    "点「添加操作 / Add Action」,搜索并选「处理银行短信」(Good to note 提供的动作)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap \"Add Action\", then search for and select \"Ingest bank SMS\" (provided by Good to note)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点「添加操作 / Add Action」,搜索并选「处理银行短信」(Good to note 提供的动作)。"
+          }
+        }
+      }
+    },
+    "点下面可重新标注金额／币种／商户／日期，改它「识别哪些短信」。": {
+      "comment": "GN-034: footer under the highlighted example, above the \"Edit detection rule\" button",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap below to re-annotate the amount / currency / merchant / date and change WHICH messages it detects."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点下面可重新标注金额／币种／商户／日期，改它「识别哪些短信」。"
+          }
+        }
+      }
+    },
+    "点右上角 + 记一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap + at the top right to add one."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点右上角 + 记一笔。"
+          }
+        }
+      }
+    },
+    "点右上角「+」→(若出现)「创建个人自动化 / Create Personal Automation」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap \"+\" in the top right, then (if shown) \"Create Personal Automation\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点右上角「+」→(若出现)「创建个人自动化 / Create Personal Automation」。"
+          }
+        }
+      }
+    },
+    "点右上角「+」准备新建一个个人自动化。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap + in the top-right to start a new personal automation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点右上角「+」准备新建一个个人自动化。"
+          }
+        }
+      }
+    },
+    "点词标注": {
+      "comment": "GN-029 confirm-screen section header: tap tokenized words to tag them per category.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tag by tapping"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点词标注"
+          }
+        }
+      }
+    },
+    "版本": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
+        }
+      }
+    },
+    "现在就开始记你的第一笔吧。": {
+      "comment": "Onboarding done step subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start recording your first entry now."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现在就开始记你的第一笔吧。"
+          }
+        }
+      }
+    },
+    "用 %@ 处理银行短信": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingest bank SMS to %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 %@ 处理银行短信"
+          }
+        }
+      }
+    },
+    "用 %@ 记一笔": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a transaction to %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 %@ 记一笔"
+          }
+        }
+      }
+    },
+    "用 Apple Pay 全自动记账": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fully automatic tracking with Apple Pay"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 Apple Pay 全自动记账"
+          }
+        }
+      }
+    },
+    "用 \\(applicationName) 记一笔 Apple Pay": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add an Apple Pay transaction with \\(applicationName)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 \\(applicationName) 记一笔 Apple Pay"
+          }
+        }
+      }
+    },
+    "用一条内置示例短信,直接走一遍记账解析,看 app 这边通不通。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Run the logging parse on a built-in sample SMS to check the app side works."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用一条内置示例短信,直接走一遍记账解析,看 app 这边通不通。"
+          }
+        }
+      }
+    },
+    "用这个备份覆盖当前全部数据？还原前会自动留一份当前数据的备份。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overwrite all current data with this backup? A backup of the current data is saved automatically before restoring."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用这个备份覆盖当前全部数据？还原前会自动留一份当前数据的备份。"
+          }
+        }
+      }
+    },
+    "用这条短信建模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Build a template from this SMS"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用这条短信建模版"
+          }
+        }
+      }
+    },
+    "相比短信自动记账:不用配关键词、不用逐家银行调模版,而且可以关掉运行通知。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compared with SMS auto-tracking: no keywords to configure, no per-bank templates to tune — and you can turn off the run notification."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相比短信自动记账:不用配关键词、不用逐家银行调模版,而且可以关掉运行通知。"
+          }
+        }
+      }
+    },
+    "短信全文": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full Message"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短信全文"
+          }
+        }
+      }
+    },
+    "短信模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SMS Templates"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短信模版"
+          }
+        }
+      }
+    },
+    "短信模版样例": {
+      "comment": "GN-032: label above the original example SMS shown (highlighted) in the template metadata sheet",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Template example"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短信模版样例"
+          }
+        }
+      }
+    },
+    "短信自动记账": {
+      "comment": "Section title / nav title for the SMS auto-logging entry (Settings + onboarding)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SMS auto-logging"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短信自动记账"
+          }
+        }
+      }
+    },
+    "确定": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定"
+          }
+        }
+      }
+    },
+    "确认识别结果": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm Detection"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认识别结果"
+          }
+        }
+      }
+    },
+    "示例模版": {
+      "comment": "Built-in placeholder demo SmsTemplate name (GN-030)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Example Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "示例模版"
+          }
+        }
+      }
+    },
+    "礼物": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gifts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "礼物"
+          }
+        }
+      }
+    },
+    "稍后可在「设置 ▸ 短信自动记账」里配置。": {
+      "comment": "Onboarding SMS step note",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can configure this later in Settings ▸ SMS auto-logging."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍后可在「设置 ▸ 短信自动记账」里配置。"
+          }
+        }
+      }
+    },
+    "立即重启": {
+      "comment": "Button: relaunch the app immediately",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart Now"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即重启"
+          }
+        }
+      }
+    },
+    "第一步:做一个「把短信喂给 app」的快捷指令": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 1: make a shortcut that feeds the SMS to the app"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一步:做一个「把短信喂给 app」的快捷指令"
+          }
+        }
+      }
+    },
+    "第一步:打开「快捷指令」的自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 1: Open Automations in Shortcuts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一步:打开「快捷指令」的自动化"
+          }
+        }
+      }
+    },
+    "第三步:选卡、立即运行、关通知": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 3: Pick cards, Run Immediately, mute notification"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第三步:选卡、立即运行、关通知"
+          }
+        }
+      }
+    },
+    "第三步:验证": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 3: verify"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第三步:验证"
+          }
+        }
+      }
+    },
+    "第二步:建一个「信息」自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 2: create a “Messages” automation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二步:建一个「信息」自动化"
+          }
+        }
+      }
+    },
+    "第一步:选「钱包 / Wallet」触发": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 1: pick the “Wallet” trigger"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一步:选「钱包 / Wallet」触发"
+          }
+        }
+      }
+    },
+    "第四步:接上 Good to note 的记账动作": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 4: Connect Good to note's recording action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第四步:接上 Good to note 的记账动作"
+          }
+        }
+      }
+    },
+    "简体中文": {
+      "comment": "Language option (endonym shown to the user)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simplified Chinese"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简体中文"
+          }
+        }
+      }
+    },
+    "类型": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "类型"
+          }
+        }
+      }
+    },
+    "线上购物": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Online Shopping"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线上购物"
+          }
+        }
+      }
+    },
+    "线下购物": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shopping"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线下购物"
+          }
+        }
+      }
+    },
+    "结束": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束"
+          }
+        }
+      }
+    },
+    "给它命名,例如「记账短信」,然后保存。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name it, e.g. \"SMS Logging\", then save."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给它命名,例如「记账短信」,然后保存。"
+          }
+        }
+      }
+    },
+    "统计": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stats"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "统计"
+          }
+        }
+      }
+    },
+    "继续重算": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recompute"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续重算"
+          }
+        }
+      }
+    },
+    "编辑": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑"
+          }
+        }
+      }
+    },
+    "编辑分类": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑分类"
+          }
+        }
+      }
+    },
+    "编辑周期交易": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Recurring"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑周期交易"
+          }
+        }
+      }
+    },
+    "编辑模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑模版"
+          }
+        }
+      }
+    },
+    "编辑识别规则": {
+      "comment": "GN-034: button/title to re-edit which SMS a template detects (re-annotate the stored example)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit detection rule"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑识别规则"
+          }
+        }
+      }
+    },
+    "自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动化"
+          }
+        }
+      }
+    },
+    "自动按从上到下的顺序逐条尝试识别，命中即停。拖动可调整顺序。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Templates are tried top to bottom and stop at the first match. Drag to reorder."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动按从上到下的顺序逐条尝试识别，命中即停。拖动可调整顺序。"
+          }
+        }
+      }
+    },
+    "自定义": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义"
+          }
+        }
+      }
+    },
+    "自定义范围": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom Range"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义范围"
+          }
+        }
+      }
+    },
+    "若某笔同时收到了银行短信,app 会在待确认收件箱把那条短信草稿标记为「可能与 Apple Pay 重复」,你拒绝即可,绝不会重复算两笔(除非确属两笔)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If a payment also triggers a bank SMS, the app flags that SMS draft in the pending inbox as a possible Apple Pay duplicate — just reject it; you'll never be double-counted (unless they really are two purchases)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "若某笔同时收到了银行短信,app 会在待确认收件箱把那条短信草稿标记为「可能与 Apple Pay 重复」,你拒绝即可,绝不会重复算两笔(除非确属两笔)。"
+          }
+        }
+      }
+    },
+    "要修改它「识别哪些短信」，请删除后用一条新短信重新创建。": {
+      "comment": "GN-032: short note under the highlighted template example (the metadata sheet only edits output settings)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To change WHICH messages it detects, delete it and re-create from a new SMS."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要修改它「识别哪些短信」，请删除后用一条新短信重新创建。"
+          }
+        }
+      }
+    },
+    "覆盖范围:仅「钱包」内线下刷卡(tap-to-pay)。现金、网银转账、未走 Apple Pay 的网购,仍需短信自动记账或手动补。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coverage: in-person Wallet tap-to-pay only. Cash, bank transfers, and online purchases not paid via Apple Pay still need SMS auto-tracking or manual entry."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "覆盖范围:仅「钱包」内线下刷卡(tap-to-pay)。现金、网银转账、未走 Apple Pay 的网购,仍需短信自动记账或手动补。"
+          }
+        }
+      }
+    },
+    "触发关键词(已复制到剪贴板)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trigger keyword (copied to clipboard)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触发关键词(已复制到剪贴板)"
+          }
+        }
+      }
+    },
+    "让「收到含关键词的短信」就自动跑刚才那个快捷指令。关键词我已经帮你复制好了,到那一步直接长按粘贴即可。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Make \"a message containing the keyword arrives\" automatically run the shortcut you just made. The keyword is already copied — when you reach that step, just long-press and paste."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "让「收到含关键词的短信」就自动跑刚才那个快捷指令。关键词我已经帮你复制好了,到那一步直接长按粘贴即可。"
+          }
+        }
+      }
+    },
+    "让这个自动化在每笔交易时,把「商户 / 金额」交给 Good to note 自动入账。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Have this automation hand the merchant and amount of each transaction to Good to note for automatic recording."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "让这个自动化在每笔交易时,把「商户 / 金额」交给 Good to note 自动入账。"
+          }
+        }
+      }
+    },
+    "记一笔": {
+      "comment": "TransactionEditView add-sheet title and AddTransactionIntent shortTitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记一笔"
+          }
+        }
+      }
+    },
+    "记一笔 %@ %@ 到 %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add %@ %@ to %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记一笔 %@ %@ 到 %@"
+          }
+        }
+      }
+    },
+    "记一笔交易到 Good to note（外币自动换算成 SGD）。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record a transaction in Good to note (foreign amounts auto-converted to SGD)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记一笔交易到 Good to note（外币自动换算成 SGD）。"
+          }
+        }
+      }
+    },
+    "记录 Apple Pay 交易": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Apple Pay transaction"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记录 Apple Pay 交易"
+          }
+        }
+      }
+    },
+    "记账": {
+      "comment": "Settings drill-in: Bookkeeping section",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bookkeeping"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记账"
+          }
+        }
+      }
+    },
+    "设完点「下一步 / Next」,进入设置要运行的动作。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When done, tap Next to set up the action to run."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设完点「下一步 / Next」,进入设置要运行的动作。"
+          }
+        }
+      }
+    },
+    "设置": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        }
+      }
+    },
+    "设置完成": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Setup complete"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置完成"
+          }
+        }
+      }
+    },
+    "识别字段（可修改）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detected Fields (editable)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别字段（可修改）"
+          }
+        }
+      }
+    },
+    "该分类「%@」下有 %lld 条交易，删除后这些交易将变为「未分类」（交易不会被删除）。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Category “%@” has %lld transaction(s). Deleting it will mark them as Uncategorized (the transactions are not deleted)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该分类「%@」下有 %lld 条交易，删除后这些交易将变为「未分类」（交易不会被删除）。"
+          }
+        }
+      }
+    },
+    "该范围暂无支出": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No expenses in this range"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该范围暂无支出"
+          }
+        }
+      }
+    },
+    "语言": {
+      "comment": "Settings: language picker title/row",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        }
+      }
+    },
+    "语言已切换,重启 App 后生效": {
+      "comment": "Alert shown after picking a language",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language changed. Restart the app to apply."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言已切换，重启 App 后生效"
+          }
+        }
+      }
+    },
+    "请先选中「%@」。": {
+      "comment": "GN-029 save error when a required field (amount) hasn't been tagged.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please tag “%@” first."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先选中「%@」。"
+          }
+        }
+      }
+    },
+    "请填写%@。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please enter %@."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请填写%@。"
+          }
+        }
+      }
+    },
+    "跟着下面的图文步骤即可完成;视频演示稍后补充。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Just follow the step-by-step cards below; a video demo is coming soon."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着下面的图文步骤即可完成;视频演示稍后补充。"
+          }
+        }
+      }
+    },
+    "跟随系统": {
+      "comment": "Language option: follow the system language",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow System"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        }
+      }
+    },
+    "跳过": {
+      "comment": "Onboarding toolbar button to skip the welcome flow",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳过"
+          }
+        }
+      }
+    },
+    "运动": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sports"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运动"
+          }
+        }
+      }
+    },
+    "还原失败": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore Failed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还原失败"
+          }
+        }
+      }
+    },
+    "还原已就绪": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore Ready"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还原已就绪"
+          }
+        }
+      }
+    },
+    "还原并覆盖": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore & Overwrite"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还原并覆盖"
+          }
+        }
+      }
+    },
+    "还没有短信模版。点右上角「+」，粘贴一条你银行的交易短信来新建。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No SMS templates yet. Tap “+” in the top right and paste one of your bank's transaction SMS to create one."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有短信模版。点右上角「+」，粘贴一条你银行的交易短信来新建。"
+          }
+        }
+      }
+    },
+    "还没有选中任何内容。选「金额」类别并点出金额至少一项。": {
+      "comment": "GN-029 empty state when no category has a selection.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing tagged yet. Pick the Amount category and tap at least the amount."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有选中任何内容。选「金额」类别并点出金额至少一项。"
+          }
+        }
+      }
+    },
+    "这一点优于短信自动记账:Apple Pay 自动化的运行通知可以关掉。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An edge over SMS auto-tracking: the Apple Pay automation's run notification can be turned off."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这一点优于短信自动记账:Apple Pay 自动化的运行通知可以关掉。"
+          }
+        }
+      }
+    },
+    "这里只改产出设置（名称、类型、默认分类、币种回退、启用）。要修改它「识别哪些短信」，请删除后用一条新短信重新创建。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This only edits output settings (name, type, default category, currency fallback, enabled). To change WHICH messages it detects, delete it and re-create from a new SMS."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这里只改产出设置（名称、类型、默认分类、币种回退、启用）。要修改它「识别哪些短信」，请删除后用一条新短信重新创建。"
+          }
+        }
+      }
+    },
+    "选中内容（可编辑）": {
+      "comment": "GN-029 section header: each tagged category's selected text, editable.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selected (editable)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选中内容（可编辑）"
+          }
+        }
+      }
+    },
+    "选卡": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选卡"
+          }
+        }
+      }
+    },
+    "选择币种": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Currency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择币种"
+          }
+        }
+      }
+    },
+    "选择本位币": {
+      "comment": "Onboarding base-currency step title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose your base currency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择本位币"
+          }
+        }
+      }
+    },
+    "选择要运行的快捷指令 → 选刚建的「记账短信」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose the shortcut to run → pick the \"SMS Logging\" you just made."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择要运行的快捷指令 → 选刚建的「记账短信」。"
+          }
+        }
+      }
+    },
+    "选择要追踪的卡——想全自动建议「全选」你常用的卡。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose the cards to track — for full automation, select all the cards you use."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择要追踪的卡——想全自动建议「全选」你常用的卡。"
+          }
+        }
+      }
+    },
+    "通用": {
+      "comment": "Settings drill-in: General section",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
+          }
+        }
+      }
+    },
+    "通讯": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phone & Internet"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通讯"
+          }
+        }
+      }
+    },
+    "配一次,以后每次用「钱包」里的卡线下刷 Apple Pay,都会自动记一笔——无需关键词、无需确认、0 点按。下面带你建这唯一一次自动化。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it up once: from then on, every in-person Apple Pay payment with a card in your Wallet is recorded automatically — no keywords, no confirmation, zero taps. Below we'll walk you through building that one automation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配一次,以后每次用「钱包」里的卡线下刷 Apple Pay,都会自动记一笔——无需关键词、无需确认、0 点按。下面带你建这唯一一次自动化。"
+          }
+        }
+      }
+    },
+    "重新复制": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy again"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新复制"
+          }
+        }
+      }
+    },
+    "金额": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "金额"
+          }
+        }
+      }
+    },
+    "金额可能带货币符号或负号,Good to note 会自动识别成正数支出,无需你处理。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The amount may include a currency symbol or minus sign — Good to note reads it as a positive expense automatically, nothing for you to do."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "金额可能带货币符号或负号,Good to note 会自动识别成正数支出,无需你处理。"
+          }
+        }
+      }
+    },
+    "金额必须大于 0。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount must be greater than 0."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "金额必须大于 0。"
+          }
+        }
+      }
+    },
+    "银行短信自动录入的待确认草稿会出现在这里。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pending drafts captured automatically from bank SMS appear here."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "银行短信自动录入的待确认草稿会出现在这里。"
+          }
+        }
+      }
+    },
+    "随手记一笔，账目了然于心。": {
+      "comment": "Onboarding welcome step subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jot down every expense, keep your finances clear."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "随手记一笔，账目了然于心。"
+          }
+        }
+      }
+    },
+    "非记账短信，已忽略。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not a transaction SMS; ignored."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非记账短信，已忽略。"
+          }
+        }
+      }
+    },
+    "预置": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预置"
+          }
+        }
+      }
+    },
+    "预防针:选了「立即运行」后,iOS 每次自动记账都会发一条系统通知,这是系统规定、关不掉,属正常,不是 bug。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heads-up: once \"Run Immediately\" is on, iOS posts a system notification on every auto-logged transaction. This is required by the system and can't be turned off — it's normal, not a bug."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预防针:选了「立即运行」后,iOS 每次自动记账都会发一条系统通知,这是系统规定、关不掉,属正常,不是 bug。"
+          }
+        }
+      }
+    },
+    "餐饮": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Food & Drink"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "餐饮"
+          }
+        }
+      }
+    },
+    "验证": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verify"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证"
+          }
+        }
+      }
+    },
+    "默认分类": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default Category"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默认分类"
+          }
+        }
+      }
+    },
+    "（汇率待补）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " (rate pending)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "（汇率待补）"
+          }
+        }
+      }
+    },
+    "识别模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recognition Templates"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别模版"
+          }
+        }
+      }
+    },
+    "邮件": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件"
+          }
+        }
+      }
+    },
+    "短信": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SMS"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短信"
+          }
+        }
+      }
+    },
+    "邮件模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件模版"
+          }
+        }
+      }
+    },
+    "新建模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建模版"
+          }
+        }
+      }
+    },
+    "识别银行交易短信，还是交易邮件？": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recognize bank transaction SMS, or transaction email?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别银行交易短信，还是交易邮件？"
+          }
+        }
+      }
+    },
+    "还没有模版。点右上角「+」，粘贴一条交易短信或一封交易邮件来新建。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No templates yet. Tap “+” in the top right and paste a transaction SMS or email to create one."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有模版。点右上角「+」，粘贴一条交易短信或一封交易邮件来新建。"
+          }
+        }
+      }
+    },
+    "自动按从上到下的顺序逐条尝试识别，命中即停。短信只试短信模版、邮件只试邮件模版。拖动可调整顺序。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Templates are tried top to bottom, stopping at the first match. SMS only tries SMS templates and email only tries email templates. Drag to reorder."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动按从上到下的顺序逐条尝试识别，命中即停。短信只试短信模版、邮件只试邮件模版。拖动可调整顺序。"
+          }
+        }
+      }
+    },
+    "邮件模版样例（关键段）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email template sample (key segment)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件模版样例（关键段）"
+          }
+        }
+      }
+    },
+    "点下面可重新标注金额／币种／商户／日期，改它「识别哪些交易」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap below to re-tag the amount / currency / merchant / date and change which transactions it recognizes."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点下面可重新标注金额／币种／商户／日期，改它「识别哪些交易」。"
+          }
+        }
+      }
+    },
+    "新建邮件模版": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Email Template"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建邮件模版"
+          }
+        }
+      }
+    },
+    "把你银行的一封交易邮件粘贴进来（整封即可，含 HTML 也行），我们会自动抽出含金额的关键段来认一认。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste one of your bank’s transaction emails (the whole thing is fine, HTML included); we’ll automatically extract the key part with the amount."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把你银行的一封交易邮件粘贴进来（整封即可，含 HTML 也行），我们会自动抽出含金额的关键段来认一认。"
+          }
+        }
+      }
+    },
+    "邮件自动记账": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email Auto-Recording"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件自动记账"
+          }
+        }
+      }
+    },
+    "可能与已记的另一笔交易重复(同金额、同币种、时间相近)。若确属同一笔请拒绝。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "May duplicate another recorded transaction (same amount, same currency, close in time). If it’s the same one, reject it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可能与已记的另一笔交易重复(同金额、同币种、时间相近)。若确属同一笔请拒绝。"
+          }
+        }
+      }
+    },
+    "银行短信或邮件自动录入的待确认草稿会出现在这里。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drafts auto-captured from bank SMS or email will appear here for confirmation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "银行短信或邮件自动录入的待确认草稿会出现在这里。"
+          }
+        }
+      }
+    },
+    "用邮件自动记账": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-record from email"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用邮件自动记账"
+          }
+        }
+      }
+    },
+    "有些银行/平台只发交易邮件,不发短信。配一次「邮件」自动化,以后每来一封交易邮件都会自动识别成一笔待确认。下面带你建这唯一一次自动化。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Some banks/platforms only send transaction emails, not SMS. Set up an “Email” automation once, and every transaction email after that is automatically turned into a draft for confirmation. We’ll walk you through this one-time setup."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有些银行/平台只发交易邮件,不发短信。配一次「邮件」自动化,以后每来一封交易邮件都会自动识别成一笔待确认。下面带你建这唯一一次自动化。"
+          }
+        }
+      }
+    },
+    "先决条件:需要先在「识别模版 ▸ 邮件模版」里粘一封你银行的交易邮件,标注金额/商户,建一个邮件模版。运行时按它来认。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prerequisite: first build an email template under Recognition Templates ▸ Email Template by pasting one of your bank’s transaction emails and tagging the amount/merchant. Recognition uses it at runtime."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先决条件:需要先在「识别模版 ▸ 邮件模版」里粘一封你银行的交易邮件,标注金额/商户,建一个邮件模版。运行时按它来认。"
+          }
+        }
+      }
+    },
+    "和短信最大的不同:邮件按「发件人(银行邮箱域名)」过滤,不是正文关键词。银行发件地址固定,反而比短信关键词更稳更准。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The biggest difference from SMS: email filters by Sender (the bank’s email domain), not body keywords. A bank’s sending address is fixed, so it’s actually more reliable than SMS keywords."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "和短信最大的不同:邮件按「发件人(银行邮箱域名)」过滤,不是正文关键词。银行发件地址固定,反而比短信关键词更稳更准。"
+          }
+        }
+      }
+    },
+    "邮件正文是以「文件」形态传入的(文件名=主题、内容=正文),所以快捷指令里要多加一步「从输入获取文本」把正文取出来。下面会带你做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The email body arrives as a file (name = subject, contents = body), so the Shortcut needs one extra “Get Text from Input” step to extract the body. We’ll guide you through it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件正文是以「文件」形态传入的(文件名=主题、内容=正文),所以快捷指令里要多加一步「从输入获取文本」把正文取出来。下面会带你做。"
+          }
+        }
+      }
+    },
+    "为什么要你亲手建:iOS 出于隐私,自动化只能你自己在「快捷指令」里建,app 无法替你创建,也从不读取你的邮箱。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Why you build it yourself: for privacy, iOS only lets you create automations in the Shortcuts app; no app can create them for you, and Good to note never reads your mailbox."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为什么要你亲手建:iOS 出于隐私,自动化只能你自己在「快捷指令」里建,app 无法替你创建,也从不读取你的邮箱。"
+          }
+        }
+      }
+    },
+    "第二步:选「邮件 / Email」触发": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 2: pick the “Email” trigger"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二步:选「邮件 / Email」触发"
+          }
+        }
+      }
+    },
+    "在触发类型列表里,选「邮件 / Email」。它和「信息 / Message」同属「通讯」分组。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the trigger list, choose “Email”. It’s in the “Communication” group alongside “Message”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发类型列表里,选「邮件 / Email」。它和「信息 / Message」同属「通讯」分组。"
+          }
+        }
+      }
+    },
+    "在列表里找到并点「邮件 / Email」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Find and tap “Email” in the list."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在列表里找到并点「邮件 / Email」。"
+          }
+        }
+      }
+    },
+    "找不到?在列表里下滑到「通讯 / Communication」分组,「邮件 / Email」就在「信息 / Message」附近。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can’t find it? Scroll to the “Communication” group; “Email” is near “Message”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到?在列表里下滑到「通讯 / Communication」分组,「邮件 / Email」就在「信息 / Message」附近。"
+          }
+        }
+      }
+    },
+    "第三步:填银行发件人、立即运行": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 3: enter the bank sender, run immediately"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第三步:填银行发件人、立即运行"
+          }
+        }
+      }
+    },
+    "在「发件人 / Sender」里填你银行交易邮件的发件地址(如 alerts@uob.com.sg)。只认这个发件人来的邮件,最准。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In “Sender”, enter the address your bank’s transaction emails come from (e.g. alerts@uob.com.sg). Matching only that sender is the most accurate."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「发件人 / Sender」里填你银行交易邮件的发件地址(如 alerts@uob.com.sg)。只认这个发件人来的邮件,最准。"
+          }
+        }
+      }
+    },
+    "(可选)再填「主题包含 / Subject Contains」进一步收窄,比如只要含「交易 / transaction」的邮件。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Optional) Add “Subject Contains” to narrow further, e.g. only emails containing “transaction”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(可选)再填「主题包含 / Subject Contains」进一步收窄,比如只要含「交易 / transaction」的邮件。"
+          }
+        }
+      }
+    },
+    "把运行方式设为「立即运行 / Run Immediately」,这样无需每封手动确认。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it to “Run Immediately” so you don’t have to confirm each email manually."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把运行方式设为「立即运行 / Run Immediately」,这样无需每封手动确认。"
+          }
+        }
+      }
+    },
+    "提示:选了「立即运行」后,每来一封记账邮件 iOS 会发一条系统通知(邮件触发无法关掉,属正常)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note: with “Run Immediately”, iOS posts a system notification for each email (this can’t be turned off for email triggers — that’s normal)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示:选了「立即运行」后,每来一封记账邮件 iOS 会发一条系统通知(邮件触发无法关掉,属正常)。"
+          }
+        }
+      }
+    },
+    "不知道发件地址?去邮箱里翻一封该银行的交易邮件,看「发件人」一栏照填即可。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don’t know the sender address? Open one of the bank’s transaction emails in Mail and copy what’s in the “From” field."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不知道发件地址?去邮箱里翻一封该银行的交易邮件,看「发件人」一栏照填即可。"
+          }
+        }
+      }
+    },
+    "第四步:取出正文,交给 Good to note": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 4: Extract the body, hand it to Good to note"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第四步:取出正文,交给 Good to note"
+          }
+        }
+      }
+    },
+    "邮件正文是「文件」,要先转成文本再喂给记账动作。两步动作,顺序很重要。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The email body is a file; convert it to text before passing it to the recording action. Two actions — order matters."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件正文是「文件」,要先转成文本再喂给记账动作。两步动作,顺序很重要。"
+          }
+        }
+      }
+    },
+    "点「添加操作 / Add Action」,搜索并加「从输入获取文本 / Get Text from Input」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “Add Action”, search for and add “Get Text from Input”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点「添加操作 / Add Action」,搜索并加「从输入获取文本 / Get Text from Input」。"
+          }
+        }
+      }
+    },
+    "再加一个操作:搜索并选「处理银行邮件」(Good to note 提供,装好 app 即在列表里)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add another action: search for and choose “Ingest bank email” (provided by Good to note; it appears once the app is installed)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再加一个操作:搜索并选「处理银行邮件」(Good to note 提供,装好 app 即在列表里)。"
+          }
+        }
+      }
+    },
+    "把「处理银行邮件」的「邮件正文」参数,设为上一步「获取文本」的输出(点参数 → 选「文本」变量)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the “Email Body” parameter of “Ingest bank email” to the output of the “Get Text” step (tap the parameter → choose the “Text” variable)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把「处理银行邮件」的「邮件正文」参数,设为上一步「获取文本」的输出(点参数 → 选「文本」变量)。"
+          }
+        }
+      }
+    },
+    "(可选)把「邮件主题」设为「快捷指令输入」里的名称变量,便于未识别时回看。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Optional) Set “Email Subject” to the name variable from Shortcut Input, handy for reviewing unrecognized emails."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(可选)把「邮件主题」设为「快捷指令输入」里的名称变量,便于未识别时回看。"
+          }
+        }
+      }
+    },
+    "顺序很关键:必须先「获取文本」、再「处理银行邮件」,且后者的正文参数接前者的输出。否则会把 HTML 文件原样喂进来,认不出。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order is crucial: “Get Text” first, then “Ingest bank email”, with the body parameter wired to the former’s output. Otherwise the raw HTML file is passed in and won’t be recognized."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顺序很关键:必须先「获取文本」、再「处理银行邮件」,且后者的正文参数接前者的输出。否则会把 HTML 文件原样喂进来,认不出。"
+          }
+        }
+      }
+    },
+    "建好后,下次来一封该银行的交易邮件,约几秒到几分钟内 app 待确认收件箱就会出现这一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once set up, the next transaction email from that bank will appear in the app’s pending inbox within seconds to minutes."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建好后,下次来一封该银行的交易邮件,约几秒到几分钟内 app 待确认收件箱就会出现这一笔。"
+          }
+        }
+      }
+    },
+    "邮件自动记账已就绪。下次来一封交易邮件即自动识别成待确认草稿,你在收件箱确认即可。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email auto-recording is ready. The next transaction email is automatically turned into a draft; just confirm it in the inbox."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件自动记账已就绪。下次来一封交易邮件即自动识别成待确认草稿,你在收件箱确认即可。"
+          }
+        }
+      }
+    },
+    "若同一笔也来了银行短信或已用 Apple Pay 记过,app 会在待确认收件箱把后到的那条标记为「可能重复」,你拒绝即可,绝不会重复算两笔(除非确属两笔)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the same purchase also arrives by bank SMS or was already recorded via Apple Pay, the app flags the later one as “possibly duplicate” in the inbox — just reject it. It never double-counts (unless they really are two purchases)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "若同一笔也来了银行短信或已用 Apple Pay 记过,app 会在待确认收件箱把后到的那条标记为「可能重复」,你拒绝即可,绝不会重复算两笔(除非确属两笔)。"
+          }
+        }
+      }
+    },
+    "没自动记上?确认:已建邮件模版、自动化发件人填对了、动作顺序是「获取文本 → 处理银行邮件」且正文参数接对了。可随时回到「设置 ▸ 记账 ▸ 邮件自动记账」重做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not recorded automatically? Check: you built an email template, the automation’s sender is correct, and the action order is “Get Text → Ingest bank email” with the body parameter wired. You can redo this anytime from Settings ▸ Bookkeeping ▸ Email Auto-Recording."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没自动记上?确认:已建邮件模版、自动化发件人填对了、动作顺序是「获取文本 → 处理银行邮件」且正文参数接对了。可随时回到「设置 ▸ 记账 ▸ 邮件自动记账」重做。"
+          }
+        }
+      }
+    },
+    "跟着下面的图文步骤即可完成;视频演示与一键导入稍后补充。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow the illustrated steps below; a video walkthrough and one-tap import are coming later."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着下面的图文步骤即可完成;视频演示与一键导入稍后补充。"
+          }
+        }
+      }
+    },
+    "跟着做,建一个自动短信触发": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow along to set up an automatic SMS trigger"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着做,建一个自动短信触发"
+          }
+        }
+      }
+    },
+    "跟着下面三步做,以后收到银行短信就自动记一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do the three steps below, and bank SMS will be recorded automatically from now on."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着下面三步做,以后收到银行短信就自动记一笔。"
+          }
+        }
+      }
+    },
+    "每次自动记账会有一条系统通知,属正常。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each auto-record shows a system notification — that's normal."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每次自动记账会有一条系统通知,属正常。"
+          }
+        }
+      }
+    },
+    "第一步:建一个快捷指令": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 1: create a shortcut"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一步:建一个快捷指令"
+          }
+        }
+      }
+    },
+    "新建快捷指令": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Shortcut"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建快捷指令"
+          }
+        }
+      }
+    },
+    "点「添加操作 / Add Action」,搜并选「处理银行短信」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “Add Action”, then search for and pick “Process bank SMS”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点「添加操作 / Add Action」,搜并选「处理银行短信」。"
+          }
+        }
+      }
+    },
+    "把动作输入设为「快捷指令输入 / Shortcut Input」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the action's input to “Shortcut Input”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把动作输入设为「快捷指令输入 / Shortcut Input」。"
+          }
+        }
+      }
+    },
+    "命名「记账短信」并保存。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name it “Bookkeeping SMS” and save."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命名「记账短信」并保存。"
+          }
+        }
+      }
+    },
+    "底部点「自动化 / Automation」,再点右上角「+」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “Automation” at the bottom, then tap “+” in the top-right."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "底部点「自动化 / Automation」,再点右上角「+」。"
+          }
+        }
+      }
+    },
+    "在触发列表里点「信息 / Message」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the trigger list, tap “Message”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发列表里点「信息 / Message」。"
+          }
+        }
+      }
+    },
+    "在「信息包含 / Message Contains」里长按粘贴关键词,点「下一步 / Next」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In “Message Contains”, long-press to paste the keyword, then tap “Next”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「信息包含 / Message Contains」里长按粘贴关键词,点「下一步 / Next」。"
+          }
+        }
+      }
+    },
+    "选要运行的快捷指令「记账短信」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick the shortcut to run: “Bookkeeping SMS”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选要运行的快捷指令「记账短信」。"
+          }
+        }
+      }
+    },
+    "选「立即运行 / Run Immediately」,点「完成 / Done」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose “Run Immediately”, then tap “Done”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选「立即运行 / Run Immediately」,点「完成 / Done」。"
+          }
+        }
+      }
+    },
+    "① 在 app 内测试": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "① Test inside the app"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "① 在 app 内测试"
+          }
+        }
+      }
+    },
+    "点下面按钮,用一条示例短信跑一遍记账。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the button below to run bookkeeping once with a sample SMS."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点下面按钮,用一条示例短信跑一遍记账。"
+          }
+        }
+      }
+    },
+    "② 给自己发一条含关键词的短信,约 1 分钟后到流水页看待确认草稿。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "② Text yourself an SMS containing the keyword; after about a minute, check the ledger for a pending draft."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "② 给自己发一条含关键词的短信,约 1 分钟后到流水页看待确认草稿。"
+          }
+        }
+      }
+    },
+    "没收到?检查自动化已开、关键词填对、选了「立即运行 / Run Immediately」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing arrived? Check that the automation is on, the keyword is correct, and you chose “Run Immediately”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没收到?检查自动化已开、关键词填对、选了「立即运行 / Run Immediately」。"
+          }
+        }
+      }
+    },
+    "跟着下面三步做,以后用「钱包」里的卡线下刷 Apple Pay 就自动记一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do the three steps below, and every in-store Apple Pay tap with a card in Wallet will be recorded automatically."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着下面三步做,以后用「钱包」里的卡线下刷 Apple Pay 就自动记一笔。"
+          }
+        }
+      }
+    },
+    "第一步:打开「快捷指令」自动化": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 1: open Shortcuts Automation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一步:打开「快捷指令」自动化"
+          }
+        }
+      }
+    },
+    "在触发列表里选「钱包 / Wallet」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the trigger list, pick \"Wallet\"."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发列表里选「钱包 / Wallet」。"
+          }
+        }
+      }
+    },
+    "第二步:选卡、立即运行": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 2: pick cards, run immediately"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二步:选卡、立即运行"
+          }
+        }
+      }
+    },
+    "勾选要追踪的卡(建议常用卡全选)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the cards to track (selecting all your everyday cards is recommended)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "勾选要追踪的卡(建议常用卡全选)。"
+          }
+        }
+      }
+    },
+    "选「立即运行 / Run Immediately」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose “Run Immediately”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选「立即运行 / Run Immediately」。"
+          }
+        }
+      }
+    },
+    "关掉「运行时通知 / Notify When Run」,点「下一步 / Next」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn off “Notify When Run”, then tap “Next”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关掉「运行时通知 / Notify When Run」,点「下一步 / Next」。"
+          }
+        }
+      }
+    },
+    "第三步:接上记账动作": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 3: connect the bookkeeping action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第三步:接上记账动作"
+          }
+        }
+      }
+    },
+    "这时已经在「选择操作 / Choose Action」页。在搜索框搜「记录 Apple Pay 交易」,选本 app 的这个操作。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You’re now on the \"Choose Action\" screen. Search \"Record Apple Pay transaction\" and pick this app’s action."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这时已经在「选择操作 / Choose Action」页。在搜索框搜「记录 Apple Pay 交易」,选本 app 的这个操作。"
+          }
+        }
+      }
+    },
+    "操作会显示成一句:「把 Apple Pay 交易 [金额] [商户] 记入流水」。点蓝色的「金额」,选触发器的「金额 / Amount」;点「商户」,选「商户 / Merchant」。「金额」必须接上,否则记的是空账。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The action shows \"Amount\" and \"Merchant\" as blue fillable fields. Tap \"Amount\" and pick the trigger’s \"Amount\"; tap \"Merchant\" and pick \"Merchant\". You must connect \"Amount\", or nothing gets recorded."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作会显示成一句:「把 Apple Pay 交易 [金额] [商户] 记入流水」。点蓝色的「金额」,选触发器的「金额 / Amount」;点「商户」,选「商户 / Merchant」。「金额」必须接上,否则记的是空账。"
+          }
+        }
+      }
+    },
+    "点「完成 / Done」保存。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “Done” to save."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点「完成 / Done」保存。"
+          }
+        }
+      }
+    },
+    "Apple Pay 自动记账已就绪,下次线下刷卡即自动入账。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay auto-recording is ready — your next in-store tap will be recorded automatically."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay 自动记账已就绪,下次线下刷卡即自动入账。"
+          }
+        }
+      }
+    },
+    "没自动记上?最常见是「金额」没接上触发器的「金额 / Amount」变量;也确认自动化已开、选了「立即运行 / Run Immediately」。可到「设置 ▸ 记账」重做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not recorded? The usual cause is \"Amount\" not connected to the trigger’s \"Amount\" variable; also check the automation is on and set to \"Run Immediately\". You can redo it under Settings ▸ Bookkeeping."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没自动记上?最常见是「金额」没接上触发器的「金额 / Amount」变量;也确认自动化已开、选了「立即运行 / Run Immediately」。可到「设置 ▸ 记账」重做。"
+          }
+        }
+      }
+    },
+    "跟着下面四步做,以后收到银行交易邮件就自动记一笔。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do the four steps below, and bank transaction emails will be recorded automatically from now on."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟着下面四步做,以后收到银行交易邮件就自动记一笔。"
+          }
+        }
+      }
+    },
+    "先决条件:先到「识别模版 ▸ 邮件模版」建一个邮件模版。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prerequisite: first create an email template under Templates ▸ Email Templates."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先决条件:先到「识别模版 ▸ 邮件模版」建一个邮件模版。"
+          }
+        }
+      }
+    },
+    "在触发列表里点「邮件 / Email」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the trigger list, tap “Email”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在触发列表里点「邮件 / Email」。"
+          }
+        }
+      }
+    },
+    "在「发件人 / Sender」填银行交易邮件的发件地址(如 alerts@uob.com.sg)。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In “Sender”, enter the from-address of your bank's transaction emails (e.g. alerts@uob.com.sg)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「发件人 / Sender」填银行交易邮件的发件地址(如 alerts@uob.com.sg)。"
+          }
+        }
+      }
+    },
+    "(可选)填「主题包含 / Subject Contains」进一步收窄。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Optional) Add “Subject Contains” to narrow it further."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(可选)填「主题包含 / Subject Contains」进一步收窄。"
+          }
+        }
+      }
+    },
+    "选「立即运行 / Run Immediately」,点「下一步 / Next」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose “Run Immediately”, then tap “Next”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选「立即运行 / Run Immediately」,点「下一步 / Next」。"
+          }
+        }
+      }
+    },
+    "每来一封记账邮件会有一条系统通知,属正常。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each bookkeeping email shows a system notification — that's normal."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每来一封记账邮件会有一条系统通知,属正常。"
+          }
+        }
+      }
+    },
+    "第四步:取出正文,交给记账动作": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step 4: extract the body, hand it to the bookkeeping action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第四步:取出正文,交给记账动作"
+          }
+        }
+      }
+    },
+    "加操作「从输入获取文本 / Get Text from Input」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add the action “Get Text from Input”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加操作「从输入获取文本 / Get Text from Input」。"
+          }
+        }
+      }
+    },
+    "再加操作「处理银行邮件」。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add another action: “Process bank email”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再加操作「处理银行邮件」。"
+          }
+        }
+      }
+    },
+    "把「处理银行邮件」的「邮件正文」设为上一步「文本」的输出。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the “Email body” of “Process bank email” to the “Text” output from the previous step."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把「处理银行邮件」的「邮件正文」设为上一步「文本」的输出。"
+          }
+        }
+      }
+    },
+    "顺序必须是先「获取文本」、再「处理银行邮件」,否则认不出。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The order must be Get Text first, then Process bank email — otherwise it won't be recognized."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顺序必须是先「获取文本」、再「处理银行邮件」,否则认不出。"
+          }
+        }
+      }
+    },
+    "邮件自动记账已就绪,下次来一封交易邮件即自动记一笔待确认。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Email auto-recording is ready — your next transaction email will become a pending draft automatically."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邮件自动记账已就绪,下次来一封交易邮件即自动记一笔待确认。"
+          }
+        }
+      }
+    },
+    "没自动记上?确认已建邮件模版、发件人填对、动作顺序是「获取文本 → 处理银行邮件」。可到「设置 ▸ 记账」重做。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not recorded? Make sure you built an email template, the sender is correct, and the action order is Get Text → Process bank email. You can redo it under Settings ▸ Bookkeeping."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没自动记上?确认已建邮件模版、发件人填对、动作顺序是「获取文本 → 处理银行邮件」。可到「设置 ▸ 记账」重做。"
+          }
+        }
+      }
+    },
+    "填发件人": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sender"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "填发件人"
+          }
+        }
+      }
+    },
+    "你常收哪种交易通知？": {
+      "comment": "GN-044 onboarding channelSelect step title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which transaction alerts do you usually get?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你常收哪种交易通知？"
+          }
+        }
+      }
+    },
+    "勾选后我们带你逐个配好自动记账；没有也能手动记账。": {
+      "comment": "GN-044 onboarding channelSelect step subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick any and we’ll set up auto-logging one by one; you can always log manually too."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "勾选后我们带你逐个配好自动记账；没有也能手动记账。"
+          }
+        }
+      }
+    },
+    "Apple Pay": {
+      "comment": "GN-044 onboarding channelSelect — Apple Pay row title (proper noun, same in both languages)",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Pay"
+          }
+        }
+      }
+    },
+    "用 Apple Pay / Apple Card 付款后自动记一笔。": {
+      "comment": "GN-044 onboarding channelSelect — Apple Pay row subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-log a transaction after you pay with Apple Pay / Apple Card."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 Apple Pay / Apple Card 付款后自动记一笔。"
+          }
+        }
+      }
+    },
+    "银行短信": {
+      "comment": "GN-044 onboarding channelSelect — SMS row title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank SMS"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "银行短信"
+          }
+        }
+      }
+    },
+    "收到银行交易短信后自动记一笔。": {
+      "comment": "GN-044 onboarding channelSelect — SMS row subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-log a transaction when you get a bank transaction SMS."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收到银行交易短信后自动记一笔。"
+          }
+        }
+      }
+    },
+    "交易邮件": {
+      "comment": "GN-044 onboarding channelSelect — email row title",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transaction email"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "交易邮件"
+          }
+        }
+      }
+    },
+    "收到银行交易邮件后自动记一笔。": {
+      "comment": "GN-044 onboarding channelSelect — email row subtitle",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-log a transaction when you get a bank transaction email."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收到银行交易邮件后自动记一笔。"
+          }
+        }
+      }
+    },
+    "打开「快捷指令」": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Shortcuts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开「快捷指令」"
+          }
+        }
+      }
+    },
+    "点下面的按钮,会直接打开「新建自动化 / New Automation」,停在选择触发那一屏。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the button below — it opens \"New Automation\" and lands right on the trigger picker."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点下面的按钮,会直接打开「新建自动化 / New Automation」,停在选择触发那一屏。"
+          }
+        }
+      }
+    },
+    "选钱包": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wallet"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选钱包"
+          }
+        }
+      }
+    }
+  }
+}

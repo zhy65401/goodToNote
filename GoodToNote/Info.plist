@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<!-- GN-036: register the goodtonote:// custom URL scheme so the Shortcuts x-callback-url
+	     x-success callback (goodtonote://walletsetup/next …) can jump BACK into the app and
+	     advance the Apple Pay setup guide. Reusable infra for GN-037 too. -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.goodtonote.app.urlscheme</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>goodtonote</string>
+			</array>
+		</dict>
+	</array>
+	<!-- GN-036: allow opening the Shortcuts app via shortcuts:// / shortcuts://x-callback-url
+	     from within the app (LSApplicationQueriesSchemes is for canOpenURL checks; open() itself
+	     doesn't strictly require it, but declaring it keeps canOpenURL honest if used later). -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>shortcuts</string>
+	</array>
+</dict>
+</plist>

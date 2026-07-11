@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+*.moved-aside
+
+# Xcode build output
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode per-user state (keep shared schemes & project.pbxproj tracked)
+*.xcuserstate
+xcuserdata/
+**/xcuserdata/
+*.xccheckout
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Misc
+*.hmap
+timeline.xctimeline
+playground.xcworkspace
