@@ -1,9 +1,3 @@
-<!--
-  Before publishing this policy, replace [contact email] in Section 10 (both
-  languages) with an address you can receive mail at. Do not remove the section.
-  The effective date below reflects this policy's initial publication.
--->
-
 # Privacy Policy — Good to note
 
 **Effective date: 2026-07-11**
@@ -45,7 +39,7 @@ The app is not directed at children and collects no data from anyone, including 
 If this policy changes, the updated version will be posted at this URL with a new effective date.
 
 ## 10. Contact
-Questions about privacy? Contact: **[contact email]**
+Questions about privacy? Contact: **zhang.hanyuan2605@gmail.com**
 
 ---
 ---
@@ -91,4 +85,4 @@ Good to note(“本应用”)是一款个人记账应用。本政策说明本应
 若本政策发生变更,更新版本将以新的生效日期发布于本网址。
 
 ## 10. 联系方式
-如对隐私有任何疑问,请联系:**[contact email]**
+如对隐私有任何疑问,请联系:**zhang.hanyuan2605@gmail.com**
