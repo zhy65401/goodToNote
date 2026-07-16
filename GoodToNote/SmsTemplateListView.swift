@@ -398,9 +398,9 @@ private struct SmsTemplateMetadataSheet: View {
             // its onSaved closure dismisses this metadata sheet too, so the user lands back on the
             // list (not on a now-stale highlighted example).
             .sheet(isPresented: $showEditDetection) {
-                SmsTemplateEditorView(editingTemplate: template) {
+                SmsTemplateEditorView(editingTemplate: template, onCancel:  {
                     dismiss()
-                }
+                })
             }
             .onChange(of: type) { _, _ in
                 if let sel = defaultCategoryID,

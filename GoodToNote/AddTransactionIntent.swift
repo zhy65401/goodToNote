@@ -28,7 +28,7 @@ enum TransactionTypeAppEnum: String, AppEnum {
 
 struct AddTransactionIntent: AppIntent {
     static var title: LocalizedStringResource = "Add Transaction"
-    static var description = IntentDescription("记一笔交易到 Good to note（外币自动换算成 SGD）。")
+    static var description = IntentDescription("记一笔交易到 5分钱（外币自动换算成 SGD）。")
     /// Stay in the background — don't force the app to the foreground.
     static var openAppWhenRun: Bool = false
 
@@ -149,10 +149,10 @@ struct GoodToNoteShortcuts: AppShortcutsProvider {
         AppShortcut(
             intent: IngestWalletTransactionIntent(),
             phrases: [
-                "用 \(.applicationName) 记一笔 Apple Pay",
-                "Record Apple Pay transaction in \(.applicationName)",
+                "用 \(.applicationName) 记一笔钱包",
+                "Record Wallet transaction in \(.applicationName)",
             ],
-            shortTitle: "记录 Apple Pay 交易",
+            shortTitle: "记录钱包交易",
             systemImageName: "creditcard"
         )
         // GN-039: silent bank-EMAIL ingest for the「邮件 / Email」automation. A SEPARATE Intent

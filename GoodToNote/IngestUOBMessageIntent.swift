@@ -39,7 +39,7 @@ import SwiftData
 struct IngestUOBMessageIntent: AppIntent {
     static var title: LocalizedStringResource = "Ingest bank SMS"
     static var description = IntentDescription(
-        "把一条交易短信全文喂给 Good to note，静默按你的短信模版识别并落盘成一笔待确认草稿（无匹配模版则落原文待识别，绝不丢弃）。")
+        "把一条交易短信全文喂给 5分钱，静默按你的短信模版识别并落盘成一笔待确认草稿（无匹配模版则落原文待识别，绝不丢弃）。")
     /// Stay silent in the background — must work on the lock screen, no UI.
     static var openAppWhenRun: Bool = false
 

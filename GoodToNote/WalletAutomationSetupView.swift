@@ -205,8 +205,8 @@ struct WalletAutomationSetupView: View {
             // GN-045: 深链已落在「选择操作 / Choose Action」页(不经过"添加操作"),且本 app 的动作在
             // Shortcuts 里渲染成 parameterSummary 那一句、「金额」「商户」是蓝色可填 token(不是字段列表),
             // 「金额」必须接,否则 ingest 记空账。搜索名须与 IngestWalletTransactionIntent.title 一致。
-            stepCard(1, "这时已经在「选择操作 / Choose Action」页。在搜索框搜「记录 Apple Pay 交易」,选本 app 的这个操作。")
-            stepCard(2, "操作会显示成一句:「把 Apple Pay 交易 [金额] [商户] 记入流水」。点蓝色的「金额」,选触发器的「金额 / Amount」;点「商户」,选「商户 / Merchant」。「金额」必须接上,否则记的是空账。")
+            stepCard(1, "这时已经在「选择操作 / Choose Action」页。在搜索框搜「记录钱包交易」,选本 app 的这个操作。")
+            stepCard(2, "操作会显示成一句:「把「钱包」交易 [金额] [商户] 记入流水」。点蓝色的「金额」,选触发器的「金额 / Amount」;点「商户」,选「商户 / Merchant」。「金额」必须接上,否则记的是空账。")
             stepCard(3, "点「完成 / Done」保存。")
         }
     }

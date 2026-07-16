@@ -46,7 +46,7 @@ import SwiftData
 struct IngestEmailIntent: AppIntent {
     static var title: LocalizedStringResource = "Ingest bank email"
     static var description = IntentDescription(
-        "把一封交易邮件的正文喂给 Good to note，静默按你的邮件模版识别并落盘成一笔待确认草稿（无匹配模版则落关键段待识别，绝不丢弃）。先在「快捷指令」里用「从输入获取文本」取出邮件正文再传入。")
+        "把一封交易邮件的正文喂给 5分钱，静默按你的邮件模版识别并落盘成一笔待确认草稿（无匹配模版则落关键段待识别，绝不丢弃）。先在「快捷指令」里用「从输入获取文本」取出邮件正文再传入。")
     /// Stay silent in the background — must work on the lock screen, no UI (same as the SMS Intent).
     static var openAppWhenRun: Bool = false
 

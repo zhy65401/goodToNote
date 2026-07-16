@@ -40,9 +40,9 @@ import AppIntents
 import SwiftData
 
 struct IngestWalletTransactionIntent: AppIntent {
-    static var title: LocalizedStringResource = "Record Apple Pay transaction"
+    static var title: LocalizedStringResource = "Record Wallet transaction"
     static var description = IntentDescription(
-        "把一笔 Apple Pay /「钱包」交易(商户+金额)直接记入 Good to note 流水,全自动、无需确认。外币自动换算成本位币。")
+        "把一笔「钱包」交易(商户+金额)直接记入 5分钱 流水,全自动、无需确认。外币自动换算成本位币。")
     /// Stay silent in the background — must work on the lock screen, no UI.
     static var openAppWhenRun: Bool = false
 
@@ -62,7 +62,7 @@ struct IngestWalletTransactionIntent: AppIntent {
     var currencyCode: String?
 
     static var parameterSummary: some ParameterSummary {
-        Summary("把 Apple Pay 交易 \(\.$amount) \(\.$merchant) 记入流水")
+        Summary("把「钱包」交易 \(\.$amount) \(\.$merchant) 记入流水")
     }
 
     @MainActor

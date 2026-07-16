@@ -3,15 +3,15 @@
 //  GoodToNote
 //
 //  GN-014 — 启动时把 SwiftData store（含 WAL sidecar）打包成单个
-//  Documents/Backups/GoodToNote-backup.gtnbak（零依赖二进制 plist 容器），单份覆盖。
-//  全程容错：任何失败只打日志，绝不抛出、不阻塞启动。Documents 经文件共享暴露为「GoodToNote」。
+//  Documents/Backups/5cents-backup.gtnbak（零依赖二进制 plist 容器），单份覆盖。
+//  全程容错：任何失败只打日志，绝不抛出、不阻塞启动。Documents 经文件共享暴露为「5分钱」。
 //
 
 import Foundation
 import SwiftData
 
 enum BackupManager {
-    static let backupName = "GoodToNote-backup.gtnbak"
+    static let backupName = "5cents-backup.gtnbak"
 
     static func backupsDir() throws -> URL {
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

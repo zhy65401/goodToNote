@@ -162,7 +162,7 @@ struct OnboardingView: View {
             Image(systemName: "checkmark.circle.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(.tint)
-            Text("欢迎使用 Good to note")
+            Text("欢迎使用 5分钱")
                 .font(.title).bold()
                 .multilineTextAlignment(.center)
             Text("随手记一笔，账目了然于心。")

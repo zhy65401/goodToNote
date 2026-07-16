@@ -33,7 +33,7 @@ struct SettingsView: View {
                 // 数据备份与还原:保持现状,置于最下方(GN-014/023 原样)。
                 Section("数据备份与还原") {
                     // GN-023: 合并为单个插值字面量（"…+…" 拼接会变 String、不自动本地化）；键含 %@=备份文件名。
-                    Text("每次启动会自动备份到「文件 → 我的 iPhone → GoodToNote → Backups」，为单个 \(BackupManager.backupName) 文件，可拷到 iCloud Drive / 电脑存档。")
+                    Text("每次启动会自动备份到「文件 → 我的 iPhone → 5分钱 → Backups」，为单个 \(BackupManager.backupName) 文件，可拷到 iCloud Drive / 电脑存档。")
                         .font(.footnote).foregroundStyle(.secondary)
                     Button("从文件还原…") { showImporter = true }
                 }

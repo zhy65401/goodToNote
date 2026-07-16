@@ -1,8 +1,8 @@
-# Privacy Policy — Good to note
+# Privacy Policy — 5 cents
 
 **Effective date: 2026-07-11**
 
-Good to note ("the app") is a personal expense-tracking app. This policy explains what the app does and does not do with your information. The short version: **your financial data stays on your device. We do not have accounts, servers, analytics, or advertising, and we never collect your data.**
+5 cents ("the app") is a personal expense-tracking app. This policy explains what the app does and does not do with your information. The short version: **your financial data stays on your device. We do not have accounts, servers, analytics, or advertising, and we never collect your data.**
 
 ## 1. We do not collect your data
 The developer does not collect, transmit, sell, or share any personal or financial information from this app. There is no account and no login — the app has no way to identify you.
@@ -27,7 +27,7 @@ The app contains **no analytics, crash-reporting, advertising, or tracking softw
 The app requests **no** device permissions — no location, contacts, camera, photos, microphone, or notifications.
 
 ## 6. Backups and your control of your data
-The app automatically saves a backup file of your database inside its own storage area on your device, and makes that file available to you through the iOS **Files** app (under **On My iPhone ▸ Good to note ▸ Backups**). This backup **stays on your device** unless **you** choose to copy it elsewhere (for example, to iCloud Drive or your computer). The app never uploads it. You can restore from a backup file you select, and you can delete all your data at any time by deleting the app.
+The app automatically saves a backup file of your database inside its own storage area on your device, and makes that file available to you through the iOS **Files** app (under **On My iPhone ▸ 5 cents ▸ Backups**). This backup **stays on your device** unless **you** choose to copy it elsewhere (for example, to iCloud Drive or your computer). The app never uploads it. You can restore from a backup file you select, and you can delete all your data at any time by deleting the app.
 
 ## 7. Data retention and deletion
 Because your data lives only on your device, **you** control retention. Deleting a transaction removes it from the local database; deleting the app removes all app data from your device. The developer holds no copy and therefore cannot access, retain, or delete data on your behalf.
@@ -44,11 +44,11 @@ Questions about privacy? Contact: **zhang.hanyuan2605@gmail.com**
 ---
 ---
 
-# 隐私政策 — Good to note
+# 隐私政策 — 5分钱
 
 **生效日期:2026-07-11**
 
-Good to note(“本应用”)是一款个人记账应用。本政策说明本应用会与不会如何处理你的信息。一句话概括:**你的财务数据只保存在你的设备上。我们没有账号、没有服务器、没有分析统计、没有广告,也绝不收集你的数据。**
+5分钱(“本应用”)是一款个人记账应用。本政策说明本应用会与不会如何处理你的信息。一句话概括:**你的财务数据只保存在你的设备上。我们没有账号、没有服务器、没有分析统计、没有广告,也绝不收集你的数据。**
 
 ## 1. 我们不收集你的数据
 开发者不会收集、传输、出售或分享本应用中的任何个人或财务信息。应用没有账号、无需登录——本应用无法识别你的身份。
@@ -73,7 +73,7 @@ Good to note(“本应用”)是一款个人记账应用。本政策说明本应
 本应用**不请求任何**设备权限——不涉及定位、通讯录、相机、相册、麦克风或通知。
 
 ## 6. 备份与你对数据的掌控
-本应用会在你设备上其自身的存储区域内自动保存一份数据库备份文件,并通过 iOS**「文件」**应用向你开放(位于**「我的 iPhone ▸ Good to note ▸ Backups」**)。该备份**始终留在你的设备上**,除非**你自己**选择将它拷贝到别处(例如 iCloud 云盘或电脑)。本应用绝不会上传它。你可以从自己选择的备份文件中恢复,也可以随时通过删除应用来清除全部数据。
+本应用会在你设备上其自身的存储区域内自动保存一份数据库备份文件,并通过 iOS**「文件」**应用向你开放(位于**「我的 iPhone ▸ 5分钱 ▸ Backups」**)。该备份**始终留在你的设备上**,除非**你自己**选择将它拷贝到别处(例如 iCloud 云盘或电脑)。本应用绝不会上传它。你可以从自己选择的备份文件中恢复,也可以随时通过删除应用来清除全部数据。
 
 ## 7. 数据留存与删除
 由于你的数据只存在于你的设备上,**留存由你掌控**。删除一笔交易即会将其从本地数据库移除;删除应用即会清除设备上的全部应用数据。开发者不持有任何副本,因此无法代你访问、留存或删除数据。
