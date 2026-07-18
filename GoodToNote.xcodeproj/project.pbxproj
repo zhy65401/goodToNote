@@ -51,6 +51,8 @@
 		A1000603000000000000001 /* SmsExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000703000000000000001 /* SmsExtractor.swift */; };
 		A1000604000000000000001 /* SmsTemplateCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000704000000000000001 /* SmsTemplateCompiler.swift */; };
 		A1000605000000000000001 /* SmsTemplateMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000705000000000000001 /* SmsTemplateMatcher.swift */; };
+		A1000942000000000000001 /* SmsTemplateMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000943000000000000001 /* SmsTemplateMigrator.swift */; };
+		A1000940000000000000001 /* SmsRecognitionRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000941000000000000001 /* SmsRecognitionRuntime.swift */; };
 		A1000606000000000000001 /* SmsTemplatePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000706000000000000001 /* SmsTemplatePresets.swift */; };
 		A1000607000000000000001 /* SmsTemplateEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000707000000000000001 /* SmsTemplateEditorView.swift */; };
 		A1000608000000000000001 /* SmsTemplateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000708000000000000001 /* SmsTemplateListView.swift */; };
@@ -120,6 +122,8 @@
 		A1000703000000000000001 /* SmsExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsExtractor.swift; sourceTree = "<group>"; };
 		A1000704000000000000001 /* SmsTemplateCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplateCompiler.swift; sourceTree = "<group>"; };
 		A1000705000000000000001 /* SmsTemplateMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplateMatcher.swift; sourceTree = "<group>"; };
+		A1000943000000000000001 /* SmsTemplateMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplateMigrator.swift; sourceTree = "<group>"; };
+		A1000941000000000000001 /* SmsRecognitionRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsRecognitionRuntime.swift; sourceTree = "<group>"; };
 		A1000706000000000000001 /* SmsTemplatePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplatePresets.swift; sourceTree = "<group>"; };
 		A1000707000000000000001 /* SmsTemplateEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplateEditorView.swift; sourceTree = "<group>"; };
 		A1000708000000000000001 /* SmsTemplateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTemplateListView.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				A1000703000000000000001 /* SmsExtractor.swift */,
 				A1000704000000000000001 /* SmsTemplateCompiler.swift */,
 				A1000705000000000000001 /* SmsTemplateMatcher.swift */,
+				A1000943000000000000001 /* SmsTemplateMigrator.swift */,
+				A1000941000000000000001 /* SmsRecognitionRuntime.swift */,
 				A1000706000000000000001 /* SmsTemplatePresets.swift */,
 				A1000707000000000000001 /* SmsTemplateEditorView.swift */,
 				A1000708000000000000001 /* SmsTemplateListView.swift */,
@@ -360,6 +366,8 @@
 				A1000603000000000000001 /* SmsExtractor.swift in Sources */,
 				A1000604000000000000001 /* SmsTemplateCompiler.swift in Sources */,
 				A1000605000000000000001 /* SmsTemplateMatcher.swift in Sources */,
+				A1000942000000000000001 /* SmsTemplateMigrator.swift in Sources */,
+				A1000940000000000000001 /* SmsRecognitionRuntime.swift in Sources */,
 				A1000606000000000000001 /* SmsTemplatePresets.swift in Sources */,
 				A1000607000000000000001 /* SmsTemplateEditorView.swift in Sources */,
 				A1000608000000000000001 /* SmsTemplateListView.swift in Sources */,

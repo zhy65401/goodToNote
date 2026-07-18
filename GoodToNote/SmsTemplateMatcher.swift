@@ -22,17 +22,60 @@ struct MatchedFields: Equatable {
     var date: Date?
 }
 
+/// GN-052 (Task 3) — WHY a template did not match. `matchOne` used to collapse all three of
+/// these into a bare `nil`, with no logging, so a user staring at "没识别到" had no way to tell a
+/// broken rule from a genuinely different message — and neither did anyone debugging it. The
+/// in-app test entry (ShortcutSetupView) renders these; the ingest runtime still treats every
+/// one of them the same way (→ unrecognized draft), so runtime behavior is unchanged.
+enum MatchFailure: Equatable {
+    /// The stored `compiledPattern` is not a valid NSRegularExpression at all — the template can
+    /// NEVER match anything. (Corrupt/hand-edited rule.)
+    case invalidPattern
+    /// The pattern is valid but this text simply doesn't fit it. The ordinary "not my message".
+    case noMatch
+    /// The regex matched but produced a different number of capture groups than `slotMap`
+    /// expects. Means rule and slotMap have drifted apart — classically a `slotMapJSON` that
+    /// degraded to "[]", or a date sub-pattern that gained a stray capturing paren (see
+    /// SmsTemplateCompiler's "exactly ONE outer capturing paren" contract). Silent-forever bug:
+    /// the regex keeps matching while the guard keeps rejecting.
+    case groupCountMismatch(expected: Int, actual: Int)
+}
+
+/// GN-052 — the result of ONE template try. `.matched` carries the extracted fields; `.failed`
+/// carries a distinguishable reason instead of the old undifferentiated `nil`.
+enum MatchOutcome: Equatable {
+    case matched(MatchedFields)
+    case failed(MatchFailure)
+}
+
 enum SmsTemplateMatcher {
     /// Single-template try: on a hit return the extracted fields (amount via AmountParser;
     /// currency normalized to uppercase ISO; date via DateParser), else nil. `now` is the
     /// reference for year-less dates (injected for deterministic tests; defaults to Date()).
+    ///
+    /// GN-052: now a thin wrapper over `matchDetailed` so there is exactly ONE matching
+    /// implementation. Behavior for every existing call site is byte-for-byte unchanged —
+    /// all three failure modes still come back as `nil`.
     static func matchOne(_ text: String, pattern: String, slotMap: [SlotRole],
                          now: Date = Date()) -> MatchedFields? {
+        if case .matched(let f) = matchDetailed(text, pattern: pattern, slotMap: slotMap, now: now) {
+            return f
+        }
+        return nil
+    }
+
+    /// GN-052 — the SAME match as `matchOne`, but reporting WHY it failed. This is the single
+    /// matching implementation; `matchOne` delegates to it.
+    static func matchDetailed(_ text: String, pattern: String, slotMap: [SlotRole],
+                              now: Date = Date()) -> MatchOutcome {
         guard let re = try? NSRegularExpression(pattern: pattern, options: [.dotMatchesLineSeparators])
-        else { return nil }
+        else { return .failed(.invalidPattern) }
         let full = NSRange(text.startIndex..., in: text)
-        guard let m = re.firstMatch(in: text, range: full),
-              m.numberOfRanges == slotMap.count + 1 else { return nil }
+        guard let m = re.firstMatch(in: text, range: full) else { return .failed(.noMatch) }
+        guard m.numberOfRanges == slotMap.count + 1 else {
+            return .failed(.groupCountMismatch(expected: slotMap.count + 1,
+                                               actual: m.numberOfRanges))
+        }
         var f = MatchedFields()
         for (i, role) in slotMap.enumerated() {
             guard let r = Range(m.range(at: i + 1), in: text) else { continue }
@@ -45,7 +88,7 @@ enum SmsTemplateMatcher {
             case .cardMask: break
             }
         }
-        return f
+        return .matched(f)
     }
 
     /// GN-032: run `pattern` over `text` and return each CAPTURE group's `Range<String.Index>`
@@ -66,6 +109,33 @@ enum SmsTemplateMatcher {
             if let r = Range(m.range(at: i + 1), in: text) { out[role] = r }
         }
         return out
+    }
+
+    // MARK: - GN-052: the ONE slotMap codec (persisted JSON ⇄ runtime [SlotRole])
+
+    /// Decode `SmsTemplate.slotMapJSON` (e.g. `["currency","amount","merchant"]`) into
+    /// [SlotRole], dropping any unknown role string. Empty/garbage JSON → [].
+    ///
+    /// GN-052 moved this here from `IngestUOBMessageIntent` (where it was private) so that
+    /// EVERY consumer of a persisted rule decodes it identically — the ingest runtime, the
+    /// post-save inbox rescan, the compiler migration, the editor's edit-mode load, and the
+    /// in-app diagnostic. The GN-052 root cause was two divergent recognition paths ("build a
+    /// template" previewed via the SmsExtractor heuristic while the runtime matched via regex);
+    /// `matchOne` + `decodeSlotMap` is now the single路径 and lives in one place so it cannot
+    /// drift again. NOTE the dropping behavior is load-bearing: an unknown role would otherwise
+    /// shift capture-group indices and make `numberOfRanges == slotMap.count + 1` fail forever.
+    static func decodeSlotMap(_ json: String) -> [SlotRole] {
+        guard let data = json.data(using: .utf8),
+              let raw = try? JSONDecoder().decode([String].self, from: data) else { return [] }
+        return raw.compactMap { SlotRole(rawValue: $0) }
+    }
+
+    /// Encode a compiled slotMap back to the persisted JSON form. Mirror of `decodeSlotMap`;
+    /// on the (impossible) encode failure it yields "[]" — the same degradation the editor and
+    /// the preset seeder already used.
+    static func encodeSlotMap(_ roles: [SlotRole]) -> String {
+        (try? JSONEncoder().encode(roles.map { $0.rawValue }))
+            .flatMap { String(data: $0, encoding: .utf8) } ?? "[]"
     }
 
     private static func normalizeCurrency(_ tok: String) -> String {

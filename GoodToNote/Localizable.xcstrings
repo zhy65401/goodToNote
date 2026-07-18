@@ -1,6 +1,214 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "粘贴一条你自己的银行短信,看模版能不能认出它。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paste one of your own bank SMS messages and see whether a template recognizes it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "粘贴一条你自己的银行短信,看模版能不能认出它。"
+          }
+        }
+      }
+    },
+    "测试识别" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Recognition"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试识别"
+          }
+        }
+      }
+    },
+    "用示例短信" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use Sample SMS"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用示例短信"
+          }
+        }
+      }
+    },
+    "确认识别无误后,可以让它真正落一笔待确认草稿。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Once the result looks right, you can let it actually create a draft."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确认识别无误后,可以让它真正落一笔待确认草稿。"
+          }
+        }
+      }
+    },
+    "发送测试(落一笔草稿)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Test (creates a draft)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发送测试(落一笔草稿)"
+          }
+        }
+      }
+    },
+    "已识别 · 模版「%@」" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recognized · template “%@”"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已识别 · 模版「%@」"
+          }
+        }
+      }
+    },
+    "未识别" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not recognized"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未识别"
+          }
+        }
+      }
+    },
+    "还没有启用的短信模版。请先到「设置 ▸ 短信模版」建一个,或启用已有的。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No SMS template is enabled yet. Add one under Settings ▸ SMS Templates, or enable an existing one."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有启用的短信模版。请先到「设置 ▸ 短信模版」建一个,或启用已有的。"
+          }
+        }
+      }
+    },
+    "这条模版的规则本身无效(正则无法编译),它永远不会匹配任何短信。请重新编辑并保存它。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "this template's rule is itself invalid (the regex won't compile), so it can never match any SMS. Please edit and save it again."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这条模版的规则本身无效(正则无法编译),它永远不会匹配任何短信。请重新编辑并保存它。"
+          }
+        }
+      }
+    },
+    "这段文字与它的结构对不上。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "this text doesn't fit its structure."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这段文字与它的结构对不上。"
+          }
+        }
+      }
+    },
+    "模版槽位与规则对不上(期望 %lld 组,实际 %lld 组),需要重新编辑并保存它。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the template's slots and rule disagree (expected %lld groups, got %lld). Please edit and save it again."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模版槽位与规则对不上(期望 %lld 组,实际 %lld 组),需要重新编辑并保存它。"
+          }
+        }
+      }
+    },
+    "结构对上了,但没能从中读出金额。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the structure matched, but no amount could be read from it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "结构对上了,但没能从中读出金额。"
+          }
+        }
+      }
+    },
+    "收件箱里有 %lld 条之前未识别的短信已被这条模版认出，现在可以直接确认了。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld previously unrecognized message(s) in your inbox were just recognized by this template and are ready to confirm."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收件箱里有 %lld 条之前未识别的短信已被这条模版认出，现在可以直接确认了。"
+          }
+        }
+      }
+    },
     "" : {
 
     },

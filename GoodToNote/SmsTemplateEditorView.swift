@@ -123,6 +123,8 @@ struct SmsTemplateEditorView: View {
     @State private var selfCheck: MatchedFields?
     @State private var showSelfCheck = false
     @State private var saveError: String?
+    /// GN-052 Task 2: how many already-landed unrecognized inbox drafts this save just upgraded.
+    @State private var rescanUpgradedCount = 0
 
     init(prefillText: String? = nil,
          editingTemplate: SmsTemplate? = nil,
@@ -624,8 +626,8 @@ struct SmsTemplateEditorView: View {
         assign = [:]
         editedText = [:]
 
-        let slotMap = (try? JSONDecoder().decode([String].self, from: Data(t.slotMapJSON.utf8)))?
-            .compactMap { SlotRole(rawValue: $0) } ?? []
+        // GN-052: one decoder for every consumer of a persisted rule (was an inline copy here).
+        let slotMap = SmsTemplateMatcher.decodeSlotMap(t.slotMapJSON)
         let spans = SmsTemplateMatcher.matchSpans(text, pattern: t.compiledPattern, slotMap: slotMap)
         for role in Self.paintRoles {
             if let charRange = spans[role], let idr = tokenRange(covering: charRange) {
@@ -815,6 +817,9 @@ struct SmsTemplateEditorView: View {
         // GN-034: EDIT mode OVERWRITES the existing template in place (applyEdits preserves its
         // id / orderIndex / isEnabled / isBuiltInPreset / createdAt — no duplicate row); NEW mode
         // inserts a fresh template (orderIndex = max existing + 1), exactly as before.
+        // GN-052: whichever branch ran, keep the persisted template so the post-save rescan can
+        // re-run it over the inbox's already-landed unrecognized drafts.
+        let savedTemplate: SmsTemplate
         if let t = editingTemplate {
             Self.applyEdits(
                 to: t,
@@ -828,6 +833,7 @@ struct SmsTemplateEditorView: View {
                 exampleText: exampleText
             )
             try? modelContext.save()
+            savedTemplate = t
         } else {
             let nextOrder = (existingTemplates.map { $0.orderIndex }.max() ?? -1) + 1
             let template = SmsTemplate(
@@ -852,13 +858,36 @@ struct SmsTemplateEditorView: View {
             )
             modelContext.insert(template)
             try? modelContext.save()
+            savedTemplate = template
         }
 
         // Self-check (both modes): run the matcher on the ORIGINAL example and show what the
         // (possibly re-edited) rule now recognizes, so the user sees it works before dismissing.
         selfCheck = SmsTemplateMatcher.matchOne(
             exampleText, pattern: compiled.pattern, slotMap: compiled.slotMap)
+
+        // Show the "saved" confirmation IMMEDIATELY — the template is already persisted, and the
+        // rescan below may need an FX lookup (15 s network timeout worst case). Nothing about the
+        // save should wait on that.
         showSelfCheck = true
+
+        // GN-052 Task 2 — the fix for "我建完模版,再放同一条短信仍说没识别到". The unrecognized
+        // draft the user built this template FROM is already sitting in the inbox; before GN-052
+        // nothing ever re-ran a new rule over it ("下一条短信才会匹配"), so the user's own SMS
+        // stayed unrecognized and the template looked broken. Now every successful save — NEW and
+        // EDIT alike — re-runs the saved template over those drafts. Matching goes through the
+        // shared runtime on the PERSISTED slotMapJSON (never a second engine, and it proves the
+        // JSON round-trip). Non-matching drafts are left untouched; matching ones are upgraded IN
+        // PLACE so nothing can be lost or duplicated.
+        //
+        // Runs DETACHED from the alert: the inbox is the authoritative surface for the result (its
+        // @Query re-renders the upgraded row as soon as this lands). The count in the alert is a
+        // best-effort nicety — if the rescan outlives the alert the user simply doesn't see the
+        // line, and never sees a wrong one.
+        Task { @MainActor in
+            rescanUpgradedCount = await SmsRecognitionRuntime.rescanUnrecognizedDrafts(
+                with: savedTemplate, in: modelContext)
+        }
     }
 
     // MARK: - Self-check message (PRESERVED)
@@ -873,7 +902,13 @@ struct SmsTemplateEditorView: View {
         let amt = f.amount.map { formatBase($0, code: cur) } ?? "—"
         let merch = f.merchantRaw.map { UOBMessageParser.displayName(from: $0) } ?? "—"
         let dateStr = f.date.map { Self.previewDateFormatter.string(from: $0) } ?? "—"
-        return String(localized: "✓ 这条模版能认出示例：金额 \(amt)／币种 \(cur)／商户 \(merch)／日期 \(dateStr)")
+        var msg = String(localized: "✓ 这条模版能认出示例：金额 \(amt)／币种 \(cur)／商户 \(merch)／日期 \(dateStr)")
+        // GN-052 Task 2: tell the user their already-received SMS was just picked up, so the
+        // inbox change isn't a surprise (and, when it's 0, they aren't left expecting one).
+        if rescanUpgradedCount > 0 {
+            msg += "\n\n" + String(localized: "收件箱里有 \(rescanUpgradedCount) 条之前未识别的短信已被这条模版认出，现在可以直接确认了。")
+        }
+        return msg
     }
 
     // MARK: - GN-029 parse previews per category

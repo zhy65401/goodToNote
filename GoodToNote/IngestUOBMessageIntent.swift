@@ -82,77 +82,33 @@ struct IngestUOBMessageIntent: AppIntent {
         let base = AppSettings.current(in: ctx).baseCurrencyCode
 
         // Fetch enabled SMS templates in ascending orderIndex; try each in order and take the
-        // FIRST template that matches with a usable (non-nil) amount. GN-039: the predicate now
-        // also requires inputKind == "sms" so the SMS path only ever tries SMS templates (email
+        // FIRST template that matches with a usable (non-nil) amount. GN-039: the predicate also
+        // requires inputKind == "sms" so the SMS path only ever tries SMS templates (email
         // templates — inputKind == "email" — are tried solely by IngestEmailIntent). Old templates
         // migrate to inputKind "sms" (the additive default), so existing SMS templates still match.
-        var descriptor = FetchDescriptor<SmsTemplate>(
-            predicate: #Predicate { $0.isEnabled == true && $0.inputKind == "sms" },
-            sortBy: [SortDescriptor(\.orderIndex, order: .forward)]
-        )
-        descriptor.propertiesToFetch = []   // fetch full objects (small table)
-        let templates = (try? ctx.fetch(descriptor)) ?? []
-
-        var matchedTemplate: SmsTemplate?
-        var matched: MatchedFields?
-        for template in templates {
-            let slotMap = decodeSlotMap(template.slotMapJSON)
-            guard let fields = SmsTemplateMatcher.matchOne(
-                message, pattern: template.compiledPattern, slotMap: slotMap) else { continue }
-            // A "matched" draft must carry a real amount; a hit with no amount is treated
-            // as unmatched below (don't write a zero-amount "matched" draft).
-            guard fields.amount != nil else { continue }
-            matchedTemplate = template
-            matched = fields
-            break
-        }
+        // GN-052: the fetch + first-match loop + draft-field writing now live in
+        // SmsRecognitionRuntime so the post-save inbox rescan and the in-app test entry run this
+        // EXACT path instead of a second copy of it. Semantics are unchanged.
+        let templates = SmsRecognitionRuntime.enabledTemplates(kind: "sms", in: ctx)
+        let scan = SmsRecognitionRuntime.scan(message, templates: templates)
 
         // MATCH → build a recognized pending draft.
-        if let template = matchedTemplate, let fields = matched, let amount = fields.amount {
-            // Currency: validate the matched 3-letter run against the known ISO catalog
-            // (Reviewer carry-forward note) — a bogus 3-char run must NOT go into FX.
-            let validCurrencies = Set(CurrencyCatalog.all)
-            let currency: String = {
-                if let c = fields.currency, validCurrencies.contains(c) { return c }
-                return template.currencyFallback
-            }()
-
-            // Foreign → base. Never throws; on failure downgrades + flags needsFxRate.
-            let conv = CurrencyConverter.live()
-            let result = await conv.convert(amount: amount, currencyCode: currency, base: base)
-
-            // Category: MerchantMemory (raw key) first; else the template's
-            // defaultCategoryID resolved to a Category (UUID scalar → fetch); else nil.
-            var category: Category? = nil
-            if let merchantRaw = fields.merchantRaw {
-                category = MerchantMemory.suggestedCategory(forRaw: merchantRaw, in: ctx)
-            }
-            if category == nil, let catID = template.defaultCategoryID {
-                category = fetchCategory(id: catID, in: ctx)
-            }
-
-            let txn = Transaction(
-                type: TransactionType(rawValue: template.transactionTypeRaw) ?? .expense,
-                originalAmount: amount,
-                currencyCode: currency,
-                fxRateToSGD: result.fxRateToBase,   // @Model 字段保留名;语义 = 到本位币
-                date: fields.date ?? .now,           // GN-028: 短信正文交易日期;抽不到/解析失败 → 到达时刻(不丢账)
-                note: template.name,                 // 收件箱据此显示是哪条模版捕获
-                merchant: fields.merchantRaw,
-                needsFxRate: result.needsFxRate,
-                isPending: true,
-                source: "sms",                       // GN-036: 录入来源 = 短信(匹配草稿)
-                category: category
-            )
+        if let template = scan.hitTemplate, let fields = scan.hitFields,
+           let resolved = await SmsRecognitionRuntime.resolveDraft(
+               template: template, fields: fields, base: base, in: ctx) {
+            let txn = Transaction(type: resolved.type, originalAmount: resolved.amount,
+                                  isPending: true,
+                                  source: "sms")   // GN-036: 录入来源 = 短信(匹配草稿)
+            SmsRecognitionRuntime.apply(resolved, to: txn)
             ctx.insert(txn)
             try? ctx.save()
 
             // Confirmation dialog (shown only if the user runs the Shortcut manually).
             // GN-024: 金额走 formatBase（Decimal direct，显式币种前缀）。
-            let amt = formatBase(amount, code: currency)
-            let merchantDisplay = fields.merchantRaw.map { UOBMessageParser.displayName(from: $0) } ?? template.name
+            let amt = formatBase(resolved.amount, code: resolved.currency)
+            let merchantDisplay = resolved.merchant.map { UOBMessageParser.displayName(from: $0) } ?? template.name
             var line = String(localized: "已收到待确认：\(amt) \(merchantDisplay)")
-            if result.needsFxRate { line += String(localized: "（汇率待补）") }
+            if resolved.needsFxRate { line += String(localized: "（汇率待补）") }
             return IngestOutcome(draftsCreated: 1, matched: true, dialogLine: line)
         }
 
@@ -176,20 +132,7 @@ struct IngestUOBMessageIntent: AppIntent {
                              dialogLine: String(localized: "已收到，待在 app 内识别。"))
     }
 
-    /// Decode SmsTemplate.slotMapJSON (e.g. ["currency","amount","merchant"]) into
-    /// [SlotRole], dropping any unknown role string. Empty/garbage JSON → [].
-    private static func decodeSlotMap(_ json: String) -> [SlotRole] {
-        guard let data = json.data(using: .utf8),
-              let raw = try? JSONDecoder().decode([String].self, from: data) else { return [] }
-        return raw.compactMap { SlotRole(rawValue: $0) }
-    }
-
-    /// Resolve a defaultCategoryID (UUID scalar, no relation) to its Category, or nil if
-    /// the category was deleted (a harmless dangling id — same tolerance as MerchantMemory).
-    @MainActor
-    private static func fetchCategory(id: UUID, in ctx: ModelContext) -> Category? {
-        var d = FetchDescriptor<Category>(predicate: #Predicate { $0.id == id })
-        d.fetchLimit = 1
-        return (try? ctx.fetch(d))?.first
-    }
+    // GN-052: `decodeSlotMap` and `fetchCategory` moved to the shared recognition path
+    // (SmsTemplateMatcher.decodeSlotMap / SmsRecognitionRuntime.fetchCategory) so the ingest
+    // runtime, the inbox rescan, the migration and the in-app test entry cannot drift apart.
 }

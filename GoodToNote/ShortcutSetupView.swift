@@ -62,6 +62,23 @@ struct ShortcutSetupView: View {
     @State private var testResultMessage: String?
     @State private var showTestResult = false
 
+    // —— GN-052 Task 3: test with YOUR OWN text, against the real engine ——
+    /// The text the user tests with. Seeded from their most recent UNRECOGNIZED SMS draft (the
+    /// message they actually want answered: "why didn't my template catch THIS?"), else the demo.
+    @State private var testText: String = ""
+    @State private var didSeedTestText = false
+    /// Result of the last dry-run recognition test (no drafts written).
+    @State private var diagnosis: Diagnosis?
+
+    /// What one dry-run test found — either a hit (which template + the extracted fields) or a
+    /// miss WITH the reason each enabled template rejected the text.
+    private struct Diagnosis {
+        var matched: Bool
+        var templateName: String?
+        var fields: [(label: String, value: String)]
+        var reason: String?
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
@@ -211,11 +228,51 @@ struct ShortcutSetupView: View {
         VStack(alignment: .leading, spacing: 16) {
             segmentTitle("checkmark.seal", "第三步:验证")
 
-            // app 内「发送测试」——直接调既有 ingest 落盘链路（不经快捷指令）。
+            // GN-052 Task 3: the test box now takes the USER'S OWN text. It used to always feed
+            // the hardcoded demo SMS, so a user whose real template was broken got a cheerful
+            // "✓ OK" from a message their template had nothing to do with — the app could not
+            // answer the one question that mattered ("does my template match MY sms?").
             VStack(alignment: .leading, spacing: 10) {
                 Label("① 在 app 内测试", systemImage: "testtube.2")
                     .font(.subheadline.bold())
-                Text("点下面按钮,用一条示例短信跑一遍记账。")
+                Text("粘贴一条你自己的银行短信,看模版能不能认出它。")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+
+                TextEditor(text: $testText)
+                    .font(.callout)
+                    .frame(minHeight: 96)
+                    .padding(6)
+                    .background(Color(.tertiarySystemFill))
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                HStack(spacing: 10) {
+                    Button {
+                        runRecognitionTest()
+                    } label: {
+                        Text("测试识别")
+                            .frame(maxWidth: .infinity)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(testText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+
+                    Button {
+                        testText = SmsTemplatePresets.demoExample
+                        diagnosis = nil
+                    } label: {
+                        Text("用示例短信")
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.bordered)
+                }
+
+                if let d = diagnosis { diagnosisCard(d) }
+
+                Divider().padding(.vertical, 2)
+
+                // The original end-to-end check, now fed the SAME text box (was: always the demo).
+                Text("确认识别无误后,可以让它真正落一笔待确认草稿。")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                 Button {
@@ -223,13 +280,13 @@ struct ShortcutSetupView: View {
                 } label: {
                     HStack {
                         if isSendingTest { ProgressView().controlSize(.small) }
-                        Text("发送测试")
+                        Text("发送测试(落一笔草稿)")
                     }
                     .frame(maxWidth: .infinity)
                     .contentShape(Rectangle())
                 }
-                .buttonStyle(.borderedProminent)
-                .disabled(isSendingTest)
+                .buttonStyle(.bordered)
+                .disabled(isSendingTest || testText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -240,6 +297,40 @@ struct ShortcutSetupView: View {
             calloutCard(icon: "paperplane", text: "② 给自己发一条含关键词的短信,约 1 分钟后到流水页看待确认草稿。")
             calloutCard(icon: "questionmark.circle", text: "没收到?检查自动化已开、关键词填对、选了「立即运行 / Run Immediately」。")
         }
+        .onAppear(perform: seedTestTextIfNeeded)
+    }
+
+    /// GN-052 Task 3 — the dry-run result: which template caught the text and what it extracted,
+    /// or WHY each enabled template rejected it.
+    @ViewBuilder
+    private func diagnosisCard(_ d: Diagnosis) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Image(systemName: d.matched ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .foregroundStyle(d.matched ? .green : .orange)
+                Text(d.matched
+                     ? String(localized: "已识别 · 模版「\(d.templateName ?? "")」")
+                     : String(localized: "未识别"))
+                    .font(.subheadline.bold())
+            }
+            ForEach(d.fields, id: \.label) { f in
+                HStack {
+                    Text(f.label).font(.caption).foregroundStyle(.secondary)
+                    Spacer()
+                    Text(f.value).font(.callout.monospaced())
+                }
+            }
+            if let reason = d.reason {
+                Text(reason)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.tertiarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     // MARK: - Bottom bar (上一段 / 下一段 / 完成)
@@ -359,18 +450,89 @@ struct ShortcutSetupView: View {
         }
     }
 
-    /// 段3 发送测试: run the SAME ingest chain the Messages automation uses, in-app, on the
-    /// neutral placeholder demo SMS (DRY — IngestUOBMessageIntent.ingest is the single source
-    /// of truth; no parse/FX/persist reimplemented here). Creates one real pending draft in the
-    /// shared store, then reports the app-side result.
+    /// GN-052 Task 3 — seed the test box with the user's OWN most recent unrecognized SMS draft.
+    /// That is the message they are actually asking about; falling back to the neutral demo only
+    /// when there is none. (Read-only — nothing is written or consumed.)
+    private func seedTestTextIfNeeded() {
+        guard !didSeedTestText else { return }
+        didSeedTestText = true
+        var d = FetchDescriptor<Transaction>(
+            predicate: #Predicate<Transaction> { $0.isPending },
+            sortBy: [SortDescriptor(\.date, order: .reverse)])
+        d.fetchLimit = 20
+        let recent = ((try? modelContext.fetch(d)) ?? [])
+            .first { SmsRecognitionRuntime.isUnrecognizedDraft($0) && $0.source == "sms" }
+        testText = recent?.note ?? SmsTemplatePresets.demoExample
+    }
+
+    /// GN-052 Task 3 — DRY-RUN the real engine over the user's own text: the exact runtime path
+    /// (SmsRecognitionRuntime.scan → SmsTemplateMatcher.matchDetailed → decodeSlotMap on the
+    /// PERSISTED slotMapJSON), just without persisting anything. Writes no drafts, so the user can
+    /// iterate freely. On a miss it reports WHY each enabled template rejected the text — before
+    /// GN-052 all three failure modes collapsed into a silent nil and nothing could be diagnosed
+    /// from inside the app.
+    private func runRecognitionTest() {
+        let text = testText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty else { return }
+        let templates = SmsRecognitionRuntime.enabledTemplates(kind: "sms", in: modelContext)
+        guard !templates.isEmpty else {
+            diagnosis = Diagnosis(matched: false, templateName: nil, fields: [],
+                                  reason: String(localized: "还没有启用的短信模版。请先到「设置 ▸ 短信模版」建一个,或启用已有的。"))
+            return
+        }
+        let result = SmsRecognitionRuntime.scan(text, templates: templates)
+        if let t = result.hitTemplate, let f = result.hitFields {
+            let cur = f.currency ?? t.currencyFallback
+            diagnosis = Diagnosis(
+                matched: true,
+                templateName: t.name,
+                fields: [
+                    (String(localized: "金额"), f.amount.map { formatBase($0, code: cur) } ?? "—"),
+                    (String(localized: "币种"), cur),
+                    (String(localized: "商户"), f.merchantRaw.map { UOBMessageParser.displayName(from: $0) } ?? "—"),
+                    (String(localized: "日期"), f.date.map { Self.testDateFormatter.string(from: $0) } ?? "—"),
+                ],
+                reason: nil)
+        } else {
+            let lines = result.attempts.map { "「\($0.template.name)」：\(Self.describe($0.reason))" }
+            diagnosis = Diagnosis(matched: false, templateName: nil, fields: [],
+                                  reason: lines.joined(separator: "\n"))
+        }
+    }
+
+    /// GN-052 Task 3 — plain-language rendering of each distinguishable failure reason.
+    private static func describe(_ r: SmsRecognitionRuntime.SkipReason) -> String {
+        switch r {
+        case .failed(.invalidPattern):
+            return String(localized: "这条模版的规则本身无效(正则无法编译),它永远不会匹配任何短信。请重新编辑并保存它。")
+        case .failed(.noMatch):
+            return String(localized: "这段文字与它的结构对不上。")
+        case .failed(.groupCountMismatch(let expected, let actual)):
+            return String(localized: "模版槽位与规则对不上(期望 \(expected) 组,实际 \(actual) 组),需要重新编辑并保存它。")
+        case .matchedButNoAmount:
+            return String(localized: "结构对上了,但没能从中读出金额。")
+        }
+    }
+
+    /// Localized medium-date formatter for the test result (matches the editor's preview style).
+    private static let testDateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .none
+        return f
+    }()
+
+    /// 段3 发送测试: run the SAME ingest chain the Messages automation uses, in-app (DRY —
+    /// IngestUOBMessageIntent.ingest is the single source of truth; no parse/FX/persist
+    /// reimplemented here). Creates one real pending draft in the shared store, then reports the
+    /// app-side result.
     ///
-    /// GN-030: the sample is now SmsTemplatePresets.demoExample (placeholder, no real brand) and
-    /// the built-in demo preset is DISABLED. A brand-new user (disabled demo, no template of
-    /// their own yet) → matcher finds nothing → the SMS lands as an ORIGINAL-TEXT draft (never
-    /// dropped). The unmatched message is therefore the honest expected path, not an error.
+    /// GN-052: it now ingests the TEXT BOX's content (the user's own SMS) instead of always the
+    /// hardcoded demo sample — the old behavior could only ever prove the demo worked. The demo
+    /// remains one tap away via「用示例短信」.
     private func runSendTest() {
         isSendingTest = true
-        let sample = SmsTemplatePresets.demoExample
+        let sample = testText.trimmingCharacters(in: .whitespacesAndNewlines)
         Task { @MainActor in
             defer { isSendingTest = false }
             let outcome = await IngestUOBMessageIntent.ingest(message: sample, into: modelContext)

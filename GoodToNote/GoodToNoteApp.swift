@@ -27,6 +27,11 @@ struct GoodToNoteApp: App {
         //     GN-030 起预置是中性占位、默认禁用的「示例模版」演示，不参与匹配；老用户已有的真实预置因
         //     幂等(builtIns.isEmpty 才种)而原样保留，绝不被占位覆盖；用户日后禁用/删除后不再补种。
         SmsTemplatePresets.seedIfNeeded(container.mainContext)
+        // 3a-2) GN-052: 一次性把已存模版按新的尾锚点策略重编译。旧编译器把商户之后的 40 个字符
+        //       逐字烤进正则(且截在半个词上),用户已建好的模版会因银行改措辞/换行而失配 —— 只改
+        //       编译器救不了已落库的那条。★安全网:每条模版都先用它自己的 exampleText 自检,
+        //       只有"新规则仍以完全相同的方式识别该示例"才覆盖,任何一关不过就原样保留不动。
+        SmsTemplateMigrator.recompileStoredTemplatesIfNeeded(container.mainContext)
         // 3b) GN-024: 确保 AppSettings 单例行存在（fetch-or-create，默认本位币 SGD）。
         //     老库无此行 → 此处建默认 SGD；新库同理。无关系新实体 = 加性轻量迁移。
         _ = AppSettings.current(in: container.mainContext)

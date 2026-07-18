@@ -53,6 +53,11 @@ enum SmsTemplateCompiler {
         #"\d{1,2}月\d{1,2}日"#,                 // 05月30日
     ]
 
+    /// A wildcard tolerant of the digit/separator shapes in `datePatterns` (slashes, dashes, 月/日).
+    /// Hoisted so the tail anchor (GN-052) can reuse the exact same wildcard the inter-slot
+    /// anchors use.
+    private static let dateWildcard = #"(?:\d{1,4}[/\-月]){1,2}\d{1,4}日?"#
+
     /// Escape `anchor` for literal matching, but substitute any embedded date shape with a
     /// non-capturing date wildcard. The non-date text around it stays literally anchored.
     private static func escapedAnchorWithDateWildcards(_ anchor: String) -> String {
@@ -70,8 +75,6 @@ enum SmsTemplateCompiler {
         }
         guard !dateRanges.isEmpty else { return NSRegularExpression.escapedPattern(for: anchor) }
         dateRanges.sort { $0.lowerBound < $1.lowerBound }
-        // A wildcard tolerant of the digit/separator shapes above (slashes, dashes, 月/日).
-        let dateWildcard = #"(?:\d{1,4}[/\-月]){1,2}\d{1,4}日?"#
         var out = ""
         var cursor = anchor.startIndex
         for r in dateRanges {
@@ -131,11 +134,9 @@ enum SmsTemplateCompiler {
             lastConsumed = s.role
         }
         // Tail anchor — ONLY when the last span is the merchant. The merchant slot is the
-        // sole greedy `(.+?)`; left un-anchored at the end it collapses to a single char, so
-        // it needs a trailing literal (e.g. ". If unauthorised") to stop against. We take
-        // the text after the merchant up to the first newline, capped at 40 chars, verbatim
-        // (leading punctuation included — it is part of the fixed warning clause these
-        // templates share, so it generalizes across same-type messages).
+        // sole non-greedy `(.+?)`; left un-anchored at the end it collapses to a single char,
+        // so it needs SOMETHING to stop against. GN-052 replaced the old ".prefix(40) verbatim"
+        // rule with a minimal BOUNDARY anchor — see `tailAnchorPattern`.
         // For any OTHER trailing slot type (amount/currency/date) we append NO tail anchor:
         // those sub-patterns are self-delimiting (a bounded char class), and a literal tail
         // would over-fit — e.g. a Chinese SMS ending "…36.34元，余额1,234.56元。" would bake
@@ -144,22 +145,145 @@ enum SmsTemplateCompiler {
         // (Use lastConsumed, not spans.last: a trailing merchant span can be DROPPED by the
         // overlap guard above, in which case the real trailing slot is an earlier role.)
         if lastConsumed == .merchant {
-            let tailFull = String(example[cursor...])
-            let tail = String(tailFull.prefix(while: { $0 != "\n" }).prefix(40))
-            if !tail.isEmpty {
-                pattern += escapedAnchorWithDateWildcards(tail); anchors.append(tail)
+            pattern += tailAnchorPattern(after: String(example[cursor...]))
+        }
+        // GN-052: the tail anchor is deliberately NOT appended to `anchors` — it is a
+        // delimiter, not a phrase, and the prose behind it is exactly the volatile text we
+        // stopped baking in. Trigger keywords come from the INTER-SLOT anchors only.
+        return CompiledTemplate(pattern: pattern, slotMap: slotMap,
+                                suggestedTriggerKeyword: pickTriggerKeyword(from: anchors))
+    }
+
+    // MARK: - GN-052 tail anchor (bounds a TRAILING merchant slot)
+
+    /// GN-052 — the boundary that stops a trailing merchant's non-greedy `(.+?)`.
+    ///
+    /// THE BUG THIS REPLACES: the old rule baked the 40 characters following the merchant into
+    /// the pattern VERBATIM. For a real UOB SMS that was ". If unauthorised, call 24/7 Fraud
+    /// Hotli" — truncated MID-WORD — so the template only matched messages whose fraud-warning
+    /// clause was byte-identical AND wrapped at the same place. Reword the warning (or wrap the
+    /// line differently) and the user's template silently stopped matching. That prose is the
+    /// single most volatile part of a bank SMS; it must not be in the pattern at all.
+    ///
+    /// THE RULE: anchor the SHORTEST thing that genuinely terminates the merchant, and nothing
+    /// beyond it.
+    ///   1. Nothing follows the merchant  → `\s*$` (end of message — GN-025 A5.6: without this
+    ///      the bare `(.+?)` captures ONE char, e.g. "BigSupermarket" → "B").
+    ///   2. A punctuation/symbol terminator follows (the overwhelmingly common case: "." "," "，"
+    ///      "—") → anchor up to and INCLUDING that terminator, and stop. Whitespace inside the
+    ///      anchor is emitted as `\s+`, so space-vs-newline wrapping no longer matters.
+    ///   3. Only whitespace follows → whitespace is NOT a terminator (merchants contain spaces;
+    ///      `(.+?)\s` would cut "fp*Food Panda" at "fp*Food"), so anchor `\s+` plus the next
+    ///      WHOLE word.
+    ///   4. The merchant is glued straight to the following text (space-less CJK) → anchor that
+    ///      following word, bounded.
+    ///
+    /// TRADE-OFF, deliberately taken: a merchant that itself contains the terminator (e.g.
+    /// "7-ELEVEN PTE. LTD") can be captured short. That degrades a merchant NAME on a
+    /// transaction that is still recorded with the right amount/currency/date — whereas
+    /// over-fitting dropped the whole transaction. Under-matching is the expensive failure, so
+    /// the boundary is kept minimal. Discrimination against OTHER banks' messages is the job of
+    /// the inter-slot literal anchors ("A transaction of ", " was made with your UOB Card
+    /// ending "), which are long, leading, and untouched by this change.
+    private static func tailAnchorPattern(after rest: String) -> String {
+        guard !rest.isEmpty else { return #"\s*$"# }
+        let isTerminator: (Character) -> Bool = { $0.isPunctuation || $0.isSymbol }
+        let delimRun = rest.prefix(while: { isTerminator($0) || $0.isWhitespace })
+
+        // Case 2 — a real terminator in the leading delimiter run: anchor through the LAST one
+        // and drop everything after it (that is the volatile prose).
+        if let lastTerm = delimRun.lastIndex(where: isTerminator) {
+            return whitespaceTolerantLiteral(String(delimRun[delimRun.startIndex...lastTerm]))
+        }
+
+        // Cases 3 & 4 — no terminator: anchor (optional whitespace +) the next whole word.
+        let word = boundaryWordPattern(String(rest.drop(while: { $0.isWhitespace })))
+        guard !word.isEmpty else { return #"\s*$"# }   // nothing but whitespace follows
+        return (delimRun.isEmpty ? "" : #"\s+"#) + word
+    }
+
+    /// Escape `s` for literal matching but emit every whitespace RUN as `\s+`, so a message that
+    /// wraps at a different place (single space vs. newline vs. ", \n") still matches.
+    private static func whitespaceTolerantLiteral(_ s: String) -> String {
+        var out = "", buf = ""
+        var i = s.startIndex
+        while i < s.endIndex {
+            if s[i].isWhitespace {
+                if !buf.isEmpty { out += NSRegularExpression.escapedPattern(for: buf); buf = "" }
+                out += #"\s+"#
+                while i < s.endIndex, s[i].isWhitespace { i = s.index(after: i) }
             } else {
-                // No tail anchor (merchant is the last span and nothing follows it on the line).
-                // Left bare, the merchant's non-greedy `(.+?)` collapses to a single char on a
-                // second message ("BigSupermarket" → "B"). Anchor it to end-of-line so it
-                // captures the WHOLE merchant. We append `$` (works with .dotMatchesLineSeparators:
-                // `$` still means end-of-string/line and is unaffected by the dot-mode flag).
-                pattern += "$"
+                buf.append(s[i]); i = s.index(after: i)
             }
         }
-        let keyword = anchors.max(by: {
-            $0.trimmingCharacters(in: .whitespaces).count < $1.trimmingCharacters(in: .whitespaces).count
-        })?.trimmingCharacters(in: .whitespaces)
-        return CompiledTemplate(pattern: pattern, slotMap: slotMap, suggestedTriggerKeyword: keyword)
+        if !buf.isEmpty { out += NSRegularExpression.escapedPattern(for: buf) }
+        return out
+    }
+
+    /// The next WHOLE word after the merchant, used only when no punctuation terminates it.
+    /// A Latin word is kept intact — never cut mid-word, which is precisely what the old
+    /// fixed-character budget did. A space-less CJK run is capped at 4 characters: every CJK
+    /// character is its own morpheme, so a prefix is a clean cut there, and 4 is enough to bound
+    /// the merchant without baking in a whole clause.
+    private static func boundaryWordPattern(_ s: String) -> String {
+        // A DATE immediately after the merchant ("… at NTUC FairPrice 18/07/26 approved") must
+        // become the date WILDCARD, never a literal. Splitting it as a "word" would stop at the
+        // first separator and bake in the day-of-month ("\s+18"), so the template would only ever
+        // match messages from that same day — the very over-fitting GN-052 exists to remove. The
+        // inter-slot anchors have always wildcarded embedded dates (escapedAnchorWithDateWildcards);
+        // this keeps the tail consistent with them.
+        for pat in datePatterns {
+            guard let re = try? NSRegularExpression(pattern: "^(?:" + pat + ")") else { continue }
+            if re.firstMatch(in: s, range: NSRange(s.startIndex..., in: s)) != nil {
+                return dateWildcard
+            }
+        }
+        let run = s.prefix(while: { !$0.isWhitespace && !$0.isPunctuation && !$0.isSymbol })
+        guard !run.isEmpty else { return "" }
+        let isLatinWord = run.allSatisfy { $0.isASCII && ($0.isLetter || $0.isNumber) }
+        return NSRegularExpression.escapedPattern(for: isLatinWord ? String(run)
+                                                                  : String(run.prefix(4)))
+    }
+
+    // MARK: - GN-052 trigger keyword (for the GN-026「信息包含」automation filter)
+
+    /// GN-052 — pick the「信息包含」trigger keyword from the INTER-SLOT literal anchors.
+    ///
+    /// THE BUG THIS REPLACES: the keyword used to be simply the LONGEST anchor — and because the
+    /// old 40-character tail was itself an anchor, the longest was usually that volatile,
+    /// mid-word-truncated fraud-warning fragment (". If unauthorised, call 24/7 Fraud Hotli").
+    /// The user pasted THAT into their Messages automation filter, so the automation missed any
+    /// reworded message and the whole chain looked broken.
+    ///
+    /// THE RULE: the EARLIEST anchor that is discriminative on its own — ≥12 characters for a
+    /// mostly-ASCII anchor, ≥4 for CJK (which packs far more meaning per character) — else the
+    /// longest anchor available. Earliest wins because the LEADING phrase of a bank SMS ("A
+    /// transaction of", "您尾号…的招行卡于") is its most stable identifying text, while the tail
+    /// is the part banks reword. The result is always whole words: anchors END where a slot
+    /// begins, and the length cap backs off to a whitespace boundary.
+    private static func pickTriggerKeyword(from anchors: [String]) -> String? {
+        let trimmed = anchors.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                             .filter { !$0.isEmpty }
+        guard !trimmed.isEmpty else { return nil }
+        let isDiscriminative: (String) -> Bool = { s in
+            s.count >= (s.allSatisfy { $0.isASCII } ? 12 : 4)
+        }
+        let chosen = trimmed.first(where: isDiscriminative)
+            ?? trimmed.max(by: { $0.count < $1.count })!
+        return capOnWordBoundary(chosen, max: 40)
+    }
+
+    /// Cap `s` at `max` characters WITHOUT cutting a word: back off to the last whitespace.
+    /// (A CJK run has no whitespace to back off to; each character is a morpheme, so a plain
+    /// prefix is already a clean cut there.)
+    private static func capOnWordBoundary(_ s: String, max: Int) -> String {
+        guard s.count > max else { return s }
+        let head = String(s.prefix(max))
+        if let lastSpace = head.lastIndex(where: { $0.isWhitespace }) {
+            let cut = String(head[head.startIndex..<lastSpace])
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            if !cut.isEmpty { return cut }
+        }
+        return head
     }
 }

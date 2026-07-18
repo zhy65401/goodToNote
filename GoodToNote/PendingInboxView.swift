@@ -62,8 +62,11 @@ struct PendingInboxView: View {
     }
 
     /// An "unrecognized" draft = the original-text draft B2 writes on no-match.
+    /// GN-052: the predicate itself lives in SmsRecognitionRuntime so this rendering and the
+    /// post-save rescan (which upgrades exactly these rows) can never disagree about which
+    /// drafts are eligible. Behavior here is unchanged — this list is pending-only already.
     private func isUnrecognized(_ d: Transaction) -> Bool {
-        d.originalAmount == 0 && (d.merchant == nil || d.merchant == "")
+        SmsRecognitionRuntime.isUnrecognizedDraft(d)
     }
 
     /// GN-039 (was GN-036): every de-dup CANDIDATE row, mapped to plain DuplicateDetector.Row
