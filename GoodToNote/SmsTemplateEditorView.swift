@@ -123,8 +123,6 @@ struct SmsTemplateEditorView: View {
     @State private var selfCheck: MatchedFields?
     @State private var showSelfCheck = false
     @State private var saveError: String?
-    /// GN-052 Task 2: how many already-landed unrecognized inbox drafts this save just upgraded.
-    @State private var rescanUpgradedCount = 0
 
     init(prefillText: String? = nil,
          editingTemplate: SmsTemplate? = nil,
@@ -881,11 +879,13 @@ struct SmsTemplateEditorView: View {
         // PLACE so nothing can be lost or duplicated.
         //
         // Runs DETACHED from the alert: the inbox is the authoritative surface for the result (its
-        // @Query re-renders the upgraded row as soon as this lands). The count in the alert is a
-        // best-effort nicety — if the rescan outlives the alert the user simply doesn't see the
-        // line, and never sees a wrong one.
+        // @Query re-renders the upgraded row as soon as this lands), and the rescan may need an FX
+        // lookup whose worst case is a 15 s network timeout — the save must never wait on that.
+        // GN-053: the returned count is deliberately DISCARDED. It used to feed a line in the
+        // self-check alert that could never appear (see `selfCheckMessage`); the rescan's effect is
+        // observed in the inbox, not reported here.
         Task { @MainActor in
-            rescanUpgradedCount = await SmsRecognitionRuntime.rescanUnrecognizedDrafts(
+            _ = await SmsRecognitionRuntime.rescanUnrecognizedDrafts(
                 with: savedTemplate, in: modelContext)
         }
     }
@@ -902,13 +902,15 @@ struct SmsTemplateEditorView: View {
         let amt = f.amount.map { formatBase($0, code: cur) } ?? "—"
         let merch = f.merchantRaw.map { UOBMessageParser.displayName(from: $0) } ?? "—"
         let dateStr = f.date.map { Self.previewDateFormatter.string(from: $0) } ?? "—"
-        var msg = String(localized: "✓ 这条模版能认出示例：金额 \(amt)／币种 \(cur)／商户 \(merch)／日期 \(dateStr)")
-        // GN-052 Task 2: tell the user their already-received SMS was just picked up, so the
-        // inbox change isn't a surprise (and, when it's 0, they aren't left expecting one).
-        if rescanUpgradedCount > 0 {
-            msg += "\n\n" + String(localized: "收件箱里有 \(rescanUpgradedCount) 条之前未识别的短信已被这条模版认出，现在可以直接确认了。")
-        }
-        return msg
+        // GN-053: this used to append "收件箱里有 N 条…已被这条模版认出". That line could never be
+        // shown. The rescan is deliberately DETACHED (it may need an FX lookup — 15 s worst case —
+        // and the save must not wait on it), so the count only arrives AFTER `showSelfCheck = true`;
+        // and SwiftUI snapshots an alert's `message` when it is presented, so a later @State change
+        // does not re-render an alert already on screen. Making it "responsive" is not achievable
+        // without blocking the alert on the rescan, which is the thing we must not do. The inbox
+        // @Query is the authoritative surface and updates itself the moment the rescan lands, so
+        // the information is not lost — only a line that was structurally incapable of being right.
+        return String(localized: "✓ 这条模版能认出示例：金额 \(amt)／币种 \(cur)／商户 \(merch)／日期 \(dateStr)")
     }
 
     // MARK: - GN-029 parse previews per category

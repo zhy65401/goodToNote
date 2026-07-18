@@ -58,6 +58,11 @@ enum SmsTemplateCompiler {
     /// anchors use.
     private static let dateWildcard = #"(?:\d{1,4}[/\-月]){1,2}\d{1,4}日?"#
 
+    /// GN-053 — the same idea as `dateWildcard`, for a BARE run of digits (a running balance, a
+    /// transaction reference, a queue number). It still REQUIRES a number in that position, so it
+    /// bounds the merchant exactly as the literal digits did — it just stops pinning WHICH number.
+    private static let digitWildcard = #"\d+"#
+
     /// Escape `anchor` for literal matching, but substitute any embedded date shape with a
     /// non-capturing date wildcard. The non-date text around it stays literally anchored.
     private static func escapedAnchorWithDateWildcards(_ anchor: String) -> String {
@@ -240,9 +245,49 @@ enum SmsTemplateCompiler {
         }
         let run = s.prefix(while: { !$0.isWhitespace && !$0.isPunctuation && !$0.isSymbol })
         guard !run.isEmpty else { return "" }
-        let isLatinWord = run.allSatisfy { $0.isASCII && ($0.isLetter || $0.isNumber) }
-        return NSRegularExpression.escapedPattern(for: isLatinWord ? String(run)
-                                                                  : String(run.prefix(4)))
+
+        // GN-053 — the word may itself be VOLATILE. The date case above is not the only kind of
+        // changeable token that can sit right after a merchant: a running BALANCE ("…FairPrice
+        // 余额12345.67元") or a transaction REFERENCE ("…GRAB 8891234") does too, and anchoring it
+        // verbatim baked the digits in (measured: `(.+?)余额12`, `(.+?)\s+8891234`). The very next
+        // message — same bank, same format, different balance — then failed to match. So: keep the
+        // STABLE, non-numeric head of the word as the anchor, and never the digits after it.
+        //   "余额12345"  → 余额        (the label bounds the merchant; the sum is noise)
+        //   "Ref8891234" → Ref
+        //   "8891234"    → \d+         (no stable head at all → require A number, not THAT number)
+        //
+        // ★ BE PRECISE ABOUT THE DIRECTION: this DOES widen what matches, deliberately, along the
+        // volatile-digit axis. `余额12` → `余额` now accepts any balance; `8891234` → `\d+` now
+        // accepts any reference number. That widening IS the fix — "the next message must match"
+        // is the whole requirement, and it cannot be met without accepting inputs the old pattern
+        // rejected. What it does NOT do is remove the boundary: a literal head still has to be
+        // there, and where there is no head a number is still REQUIRED in that position, so the
+        // merchant capture stays bounded. Narrowing happens only in what gets BAKED IN (the
+        // specific digits); the match set grows. Anyone reviewing a tail-anchor change should be
+        // reading for "did the boundary survive", not for "did nothing get looser".
+        //
+        // Both ASCII and FULL-WIDTH digits count as volatile: `余额１２３４５元` is the same
+        // message in a different encoding, and treating ０-９ (U+FF10–FF19) as stable text baked
+        // `余额１２` in exactly as the ASCII form once did. Other characters that report
+        // `isNumber` are NOT volatile — CJK numerals and enclosed forms (二, 十, ㊈) are ordinary
+        // morphemes of a stable word, and cutting there would shorten a perfectly good anchor.
+        // (`digitWildcard` is `\d+`, and ICU's `\d` spans Unicode Nd, so it matches both widths.)
+        //
+        // Known and accepted: a word whose very first character is a digit collapses to `\d+`,
+        // and a word that is digit-broken early keeps only its short head ("A1B2C3" → `\s+A`,
+        // "第3季度报表" → `\s+第`). A one-character anchor is weak but still a boundary, and it is
+        // strictly better than baking in a number that changes on the next message.
+        let isVolatileDigit: (Character) -> Bool = { c in
+            c.isNumber && (c.isASCII || ("\u{FF10}"..."\u{FF19}").contains(c))
+        }
+        let head = run.prefix(while: { !isVolatileDigit($0) })
+        guard !head.isEmpty else { return digitWildcard }
+
+        // (`head` is digit-free by construction, so "Latin word" here means ASCII letters. A CJK
+        // run is still capped at 4 — each character is its own morpheme, so a prefix is a clean cut.)
+        let isLatinWord = head.allSatisfy { $0.isASCII && $0.isLetter }
+        return NSRegularExpression.escapedPattern(for: isLatinWord ? String(head)
+                                                                   : String(head.prefix(4)))
     }
 
     // MARK: - GN-052 trigger keyword (for the GN-026「信息包含」automation filter)

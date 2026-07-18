@@ -37,7 +37,24 @@ import SwiftData
 
 enum SmsTemplateMigrator {
     /// One-shot flag (mirrors SmsTemplatePresets' `smsDemoPresetSeeded` idiom).
-    static let recompileFlagKey = "gn052TemplatesRecompiled"
+    ///
+    /// ★ GN-053 BUMPED THIS KEY (was `gn052TemplatesRecompiled`). The gate is what makes the pass
+    /// one-shot, so a store migrated under GN-052 is frozen at whatever the GN-052 compiler
+    /// produced. GN-053 changed the compiler again — a volatile digit run right after a trailing
+    /// merchant (a running balance, a transaction reference) is now wildcarded instead of baked in
+    /// verbatim — and those already-migrated templates would never see the improvement. A new key
+    /// re-opens the gate exactly once more.
+    ///
+    /// Re-running is safe by construction, and deliberately so: every gate in `recompiledRule` is
+    /// re-applied from scratch, a template that fails ANY of them is left byte-for-byte untouched,
+    /// and a template already carrying new-compiler output returns `.skippedUnchanged` and is not
+    /// rewritten. The pass is therefore idempotent — running it twice is indistinguishable from
+    /// running it once (pinned by GN-052_migration_test S7.4/S7.5 and S9.5).
+    ///
+    /// FUTURE: any further change to SmsTemplateCompiler's emitted pattern needs this key bumped
+    /// again, for the same reason. It is not a version stamp — it is "has THIS compiler's output
+    /// been applied to the store yet".
+    static let recompileFlagKey = "gn053TemplatesRecompiled"
 
     /// The three rule fields a successful recompile replaces. Nothing else is ever written.
     struct RecompiledRule: Equatable {

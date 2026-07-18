@@ -193,22 +193,6 @@
         }
       }
     },
-    "收件箱里有 %lld 条之前未识别的短信已被这条模版认出，现在可以直接确认了。" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld previously unrecognized message(s) in your inbox were just recognized by this template and are ready to confirm."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "收件箱里有 %lld 条之前未识别的短信已被这条模版认出，现在可以直接确认了。"
-          }
-        }
-      }
-    },
     "" : {
 
     },
